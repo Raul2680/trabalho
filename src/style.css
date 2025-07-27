@@ -266,9 +266,68 @@ footer {
 }
 
 
-
 /* MODO ESCURO */
-
+body.dark-mode {
+  background: #1e1e2f;
+  color: #f0f0f0;
+}
+body.dark-mode .navbar {
+  background: #2c254d;
+  box-shadow: 0 2px 18px #00000033;
+}
+body.dark-mode .nav-logo {
+  background: #3a2f5f;
+  color: #f0f0f0;
+}
+body.dark-mode .nav-logo:hover {
+  background: #4a3b6f;
+  color: #ffffff;
+}
+body.dark-mode .nav-title {
+  color: #f0f0f0;
+}
+body.dark-mode .nav-search {
+  background: #2e2e3e;
+  box-shadow: 0 1px 5px #00000033;
+}
+body.dark-mode .nav-search input[type="text"] {
+  color: #ffffff;
+}
+body.dark-mode .nav-search button {
+  background: #3a2f5f;
+  color: #ffffff;
+}
+body.dark-mode .nav-search button:hover {
+  background: #4a3b6f;
+}
+body.dark-mode .menu-btn {
+  background: #3a2f5f;
+  color: #ffffff;
+}
+body.dark-mode .menu-btn:hover,
+body.dark-mode .menu-btn:focus {
+  background: #4a3b6f;
+  color: #ffffff;
+}
+body.dark-mode .menu-dropdown {
+  background: #2e2e3e;
+  color: #ffffff;
+}
+body.dark-mode .menu-dropdown a {
+  color: #f0f0f0;
+}
+body.dark-mode .menu-dropdown a:hover {
+  background: #3a2f5f;
+  color: #ffffff;
+}
+body.dark-mode .card-receita-prof.receita-full {
+  background: #2e2e3e;
+  box-shadow: 0 10px 36px #00000033;
+}
+body.dark-mode .card-receita-prof ul,
+body.dark-mode .card-receita-prof ol {
+  background: #3a2f5f;
+  box-shadow: 0 1px 6px #00000033;
 .menu-btn {
   background: #f3f0fd;
   color: #574aa0;
