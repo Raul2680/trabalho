@@ -4,18 +4,13 @@
   <meta charset="UTF-8">
   <title>Receitas Colaborativas</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Botão de alternância de modo escuro -->
-<button onclick="toggleDarkMode()" class="menu-btn" style="position:fixed;top:1rem;right:1rem;z-index:1000;">
-  🌙 Modo Escuro
-</button>
-
   <!-- NAVBAR PROFISSIONAL -->
   <header class="navbar">
     <div class="navbar-content">
-      <a href="/trabalho/src/index.html" class="nav-logo" aria-label="Página Principal">🍽️</a>
+      <a href="/index.html" class="nav-logo" aria-label="Página Principal">🍽️</a>
       <span class="nav-title">Receitas Colaborativas</span>
       <form class="nav-search" action="/pesquisa.html" method="GET">
         <input type="text" name="q" placeholder="Procure receita, ingrediente...">
@@ -24,55 +19,42 @@
       <nav class="nav-menu">
         <button class="menu-btn" aria-haspopup="true" aria-expanded="false">Comidas ▾</button>
         <ul class="menu-dropdown">
-          <li><a href="/trabalho/receitas/brigadeiro.html">Brigadeiro</a></li>
-          <li><a href="/trabalho/receitas/coxinha-frango.html">Coxinha de Frango</a></li>
-          <li><a href="/trabalho/receitas/feijoada.html">Feijoada</a></li>
-          <li><a href="/trabalho/receitas/francesinha.html">Francesinha</a></li>
-          <li><a href="/trabalho/receitas/arroz-de-pato.html">Arroz de Pato</a></li>
-          <li><a href="/trabalho/receitas/pastel-de-nata.html">Pastel de Nata</a></li>
-          <li><a href="/trabalho/receitas/amêijoas-à-bulhão-pato.html">Amêijoas à Bulhão Pato</a></li>
-          <li><a href="/trabalho/receitas/carne-de-porco-à-alentejana.html">Carne de Porco à Alentejana</a></li>
+          <li><a href="/receitas/brigadeiro.html">Brigadeiro</a></li>
+          <li><a href="/receitas/coxinha-frango.html">Coxinha de Frango</a></li>
+          <li><a href="/receitas/feijoada.html">Feijoada</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- Aqui entra o conteúdo do site (ex: grid de receitas) -->
     <section style="padding:3rem 0;">
       <h1 style="text-align:center;font-weight:800;">Bem-vindo ao Projeto Receitas Colaborativas!</h1>
       <p style="text-align:center;max-width:460px;margin:1.3rem auto;font-size:1.15rem;">
         Use a barra de pesquisa acima para procurar receitas ou explore via o menu “Comidas”.
       </p>
+      <!-- ... restante do conteúdo ... -->
     </section>
   </main>
 
   <footer>
     Projeto colaborativo no GitHub &middot; <span id="ano"></span>
   </footer>
-
   <script>
     document.getElementById('ano').textContent = new Date().getFullYear();
+    // Abre/fecha dropdown no clique (acessibilidade simples)
     document.querySelector('.menu-btn').onclick = function () {
       document.querySelector('.menu-dropdown').classList.toggle('show');
       this.setAttribute('aria-expanded', document.querySelector('.menu-dropdown').classList.contains('show'));
     };
+    // Fecha dropdown ao clicar fora
     document.body.addEventListener('click', function(e){
       if (!e.target.closest('.nav-menu')) {
         document.querySelector('.menu-dropdown').classList.remove('show');
         document.querySelector('.menu-btn').setAttribute('aria-expanded','false');
       }
     });
-
-    // Script para alternância de modo escuro
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-      localStorage.setItem('modoEscuro', document.body.classList.contains('dark-mode'));
-    }
-    window.onload = function() {
-      if (localStorage.getItem('modoEscuro') === 'true') {
-        document.body.classList.add('dark-mode');
-      }
-    };
   </script>
 </body>
 </html>
