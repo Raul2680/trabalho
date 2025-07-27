@@ -1,0 +1,18 @@
+<article id="brigadeiro" class="receita">
+  <h2>Brigadeiro</h2>
+  <h3>Ingredientes</h3>
+  <ul>
+    <li>1 lata de leite condensado</li>
+    <li>1 colher de sopa de manteiga</li>
+    <li>7 colheres de sopa de chocolate em pó</li>
+    <li>Granulado para enrolar</li>
+  </ul>
+  <h3>Preparação</h3>
+  <ol>
+    <li>Numa panela, misture o leite condensado, a manteiga e o chocolate em pó.</li>
+    <li>Cozinhe em fogo médio, mexendo sempre, até começar a soltar do fundo da panela (ponto de brigadeiro).</li>
+    <li>Deixe esfriar.</li>
+    <li>Enrole em pequenas bolinhas e passe no granulado.</li>
+    <li>Sirva e aproveite!</li>
+  </ol>
+</article>
