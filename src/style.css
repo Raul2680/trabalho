@@ -110,7 +110,8 @@ body {
   margin-left: 0.5rem;
   transition: background 0.14s, color 0.18s;
 }
-.menu-btn:hover, .menu-btn:focus {
+.menu-btn:hover,
+.menu-btn:focus {
   background: #ede7fb;
   color: #252545;
 }
@@ -265,7 +266,7 @@ footer {
   }
 }
 
-/* ========== MODO ESCURO CORRIGIDO ========== */
+/* ========== MODO ESCURO CORRIGIDO (inclui menu-btn) ========== */
 body.dark-mode {
   background: #1e1e2f;
   color: #f0f0f0;
