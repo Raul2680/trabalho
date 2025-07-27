@@ -24,17 +24,17 @@
           <li><a href="/receitas/feijoada.html">Feijoada</a></li>
         </ul>
       </nav>
+      <!-- Botão de modo escuro completamente à direita -->
+      <button class="darkmode-toggle" id="toggle-darkmode" title="Alternar modo escuro" aria-label="Modo escuro">🌙</button>
     </div>
   </header>
 
   <main>
-    <!-- Aqui entra o conteúdo do site (ex: grid de receitas) -->
     <section style="padding:3rem 0;">
       <h1 style="text-align:center;font-weight:800;">Bem-vindo ao Projeto Receitas Colaborativas!</h1>
       <p style="text-align:center;max-width:460px;margin:1.3rem auto;font-size:1.15rem;">
         Use a barra de pesquisa acima para procurar receitas ou explore via o menu “Comidas”.
       </p>
-      <!-- ... restante do conteúdo ... -->
     </section>
   </main>
 
@@ -43,17 +43,23 @@
   </footer>
   <script>
     document.getElementById('ano').textContent = new Date().getFullYear();
-    // Abre/fecha dropdown no clique (acessibilidade simples)
+    // Dropdown menu funcional
     document.querySelector('.menu-btn').onclick = function () {
       document.querySelector('.menu-dropdown').classList.toggle('show');
       this.setAttribute('aria-expanded', document.querySelector('.menu-dropdown').classList.contains('show'));
     };
-    // Fecha dropdown ao clicar fora
     document.body.addEventListener('click', function(e){
       if (!e.target.closest('.nav-menu')) {
         document.querySelector('.menu-dropdown').classList.remove('show');
         document.querySelector('.menu-btn').setAttribute('aria-expanded','false');
       }
+    });
+    // Botão modo escuro
+    const btnDark = document.getElementById('toggle-darkmode');
+    btnDark.addEventListener('click', function() {
+      document.body.classList.toggle('dark-mode');
+      // Toggle ícone lua/sol (opcional)
+      this.textContent = document.body.classList.contains('dark-mode') ? "☀️" : "🌙";
     });
   </script>
 </body>

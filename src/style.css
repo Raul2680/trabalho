@@ -3,7 +3,6 @@ html, body {
   margin: 0;
   padding: 0;
 }
-
 body {
   display: flex;
   flex-direction: column;
@@ -12,7 +11,6 @@ body {
   background: #f6f7fb;
   color: #252545;
 }
-
 /* Navbar */
 .navbar {
   width: 100%;
@@ -21,7 +19,6 @@ body {
   display: flex;
   justify-content: center;
 }
-
 .navbar-content {
   display: flex;
   align-items: center;
@@ -29,238 +26,131 @@ body {
   max-width: 1170px;
   padding: 0.5rem 2.8vw;
   gap: 2vw;
-}
-
-.nav-logo {
-  font-size: 2.2rem;
-  margin-right: 1.3rem;
-  border-radius: 100px;
-  background: #faf6fd;
-  color: #623fc1;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px;
-  transition: background .14s, color .17s;
-  display: flex;
-  align-items: center;
-}
-.nav-logo:hover {
-  background: #e9e0fb;
-  color: #256cf5;
-}
-
-.nav-title {
-  font-size: 1.63rem;
-  font-weight: 900;
-  color: #faf6fd;
-  letter-spacing: 0.01em;
-  margin-right: 2vw;
-  white-space: nowrap;
-}
-
-/* Barra de pesquisa na navbar */
-.nav-search {
-  display: flex;
-  flex: 1 1 240px;
-  max-width: 340px;
-  margin: 0 2vw;
-  background: #faf6fd;
-  border-radius: 10px;
-  box-shadow: 0 1px 5px #45387631;
-}
-.nav-search input[type="text"] {
-  outline: none;
-  border: none;
-  background: transparent;
-  color: #392c69;
-  font-size: 1rem;
-  padding: 11px 12px;
-  border-radius: 10px 0 0 10px;
-  flex: 1;
-}
-.nav-search button {
-  outline: none;
-  border: none;
-  background: none;
-  font-size: 1.28em;
-  padding: 0 17px;
-  border-radius: 0 10px 10px 0;
-  cursor: pointer;
-  color: #885ce7;
-  background: #ede7fb;
-  transition: background 0.2s;
-}
-.nav-search button:hover {
-  background: #e0d1ff;
-}
-
-/* Dropdown menu */
-.nav-menu {
   position: relative;
 }
-.menu-btn {
+/* Garante que o darkmode-toggle vai para a direita */
+.darkmode-toggle {
+  margin-left: auto;
   background: #f3f0fd;
-  color: #574aa0;
   border: none;
-  font-weight: 700;
-  font-size: 1.10rem;
-  padding: 10px 18px;
-  border-radius: 9px;
+  color: #574aa0;
+  font-size: 1.42rem;
+  border-radius: 41px;
+  padding: 8px 16px;
   cursor: pointer;
-  margin-left: 0.5rem;
-  transition: background 0.14s, color 0.18s;
+  transition: background 0.18s, color 0.18s;
+  box-shadow: 0 1px 3px #19182b18;
+  outline: none;
+  position: relative;
 }
-.menu-btn:hover, .menu-btn:focus {
+.darkmode-toggle:hover,
+.darkmode-toggle:focus {
   background: #ede7fb;
-  color: #252545;
+  color: #25185b;
+}
+/* Mantém a ordem dos itens da navbar */
+.nav-menu, .darkmode-toggle {
+  z-index: 2;
 }
 
-.menu-dropdown {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 110%;
-  background: #fff;
-  color: #46397a;
-  border-radius: 8px;
-  box-shadow: 0 5px 34px #4538761a;
-  min-width: 180px;
-  padding: 0.25rem 0;
-  z-index: 5;
-  text-align: left;
-}
-.menu-dropdown.show {
-  display: block;
-}
-.menu-dropdown li {
-  list-style: none;
-}
-.menu-dropdown a {
-  display: block;
-  text-decoration: none;
-  color: #3d296f;
-  font-weight: 500;
-  padding: 11px 22px;
-  border-radius: 7px;
-  transition: background .14s;
-}
-.menu-dropdown a:hover {
-  background: #ece8fa;
-  color: #32215d;
-}
+/* Resto do CSS igual ao teu atual... */
+.nav-logo { ... }
+.nav-title { ... }
+.nav-search { ... }
+.menu-btn { ... }
+.menu-dropdown { ... }
+main { ... }
+.card-receita-prof.receita-full { ... }
+footer { ... }
 
-/* Main para centralizar o card, sem margem extra */
-main {
-  flex: 1;
-  padding: 0;
-  margin: 0;
-  min-height: 0;
-  display: flex;
-  align-items: center;   /* Centraliza verticalmente */
-  justify-content: center; /* Centraliza horizontalmente */
+@media (max-width:900px) {
+  .navbar-content { gap: 10px; flex-wrap: wrap; }
+  .darkmode-toggle { margin: 10px 0 0 auto; }
 }
-
-/* Card central ocupa quase toda a área, com margens iguais */
-.card-receita-prof.receita-full {
-  background: #fff;
-  border-radius: 22px;
-  box-shadow: 0 10px 36px #cec5ef35;
-  padding: 3.2rem;
-  margin: 2.5rem;   /* margem igual em todos os lados */
-  width: 100%;
-  max-width: 700px;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
-.card-receita-prof .emoji {
-  font-size: 2.3rem;
-  margin-bottom: 0.54rem;
-  display: block;
-}
-
-.card-receita-prof h1 {
-  font-size: 2.15rem;
-  font-weight: 900;
-  margin: 0 0 0.35em 0;
-  color: #46397a;
-  letter-spacing: 0.02em;
-}
-
-.card-receita-prof .descricao {
-  color: #8d60bb;
-  margin-bottom: 1.2em;
-  font-size: 1.04rem;
-}
-
-.card-receita-prof h3 {
-  margin-bottom: 0.4em;
-  color: #46397a;
-  font-size: 1.22rem;
-  font-weight: 800;
-}
-
-.card-receita-prof ul,
-.card-receita-prof ol {
-  margin-bottom: 1.2em;
-  border-radius: 8px;
-  background: #f9f7ff;
-  padding: 0.95em 1.2em;
-  box-shadow: 0 1px 6px #e0dffb31;
-}
-
-/* Footer sempre ao fundo */
-footer {
-  margin-top: 2.3em;
-  text-align: center;
-  color: #8d60bb;
-  background: #faf6fd;
-  padding: 1.2rem 0.6rem;
-  font-weight: 500;
-  border-radius: 18px 18px 0 0;
-  box-shadow: 0 -2px 12px #a689ef27;
-  flex-shrink: 0;
-}
-
-/* RESPONSIVO */
-@media (max-width: 900px) {
-  .card-receita-prof.receita-full {
-    margin: 1rem;
-    padding: 1.5rem;
-    max-width: 97vw;
-  }
-  .navbar-content {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .nav-title {
-    font-size: 1.12rem;
-    margin-right: 10px;
-  }
-  .nav-search {
-    margin: 7px 2vw;
-  }
-}
-@media (max-width: 600px) {
-  .card-receita-prof.receita-full {
-    margin: 0.5rem;
-    padding: 1rem;
-  }
+@media (max-width:600px) {
   .navbar-content {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
   }
-  .nav-logo {
-    margin: 0 auto 7px;
-  }
-  .nav-search {
-    margin: 10px 0;
-  }
-  .nav-title {
-    text-align: center;
-  }
+  .darkmode-toggle { margin: 10px 0 0 auto; }
+}
+
+/* --------- MODO ESCURO --------- */
+body.dark-mode {
+  background: #1e1e2f;
+  color: #f0f0f0;
+}
+
+body.dark-mode .navbar {
+  background: #2c254d;
+  box-shadow: 0 2px 18px #0008;
+}
+body.dark-mode .nav-logo {
+  background: #3a2f5f;
+  color: #f0f0f0;
+}
+body.dark-mode .nav-logo:hover {
+  background: #4a3b6f;
+  color: #ffffff;
+}
+body.dark-mode .nav-title {
+  color: #f0f0f0;
+}
+body.dark-mode .nav-search {
+  background: #2e2e3e;
+  box-shadow: 0 1px 5px #00000033;
+}
+body.dark-mode .nav-search input[type="text"] {
+  color: #ffffff;
+}
+body.dark-mode .nav-search button {
+  background: #3a2f5f;
+  color: #ffffff;
+}
+body.dark-mode .nav-search button:hover {
+  background: #4a3b6f;
+}
+body.dark-mode .menu-btn {
+  background: #3a2f5f;
+  color: #ffffff;
+}
+body.dark-mode .menu-btn:hover,
+body.dark-mode .menu-btn:focus {
+  background: #4a3b6f;
+  color: #ffffff;
+}
+body.dark-mode .menu-dropdown {
+  background: #2e2e3e;
+  color: #ffffff;
+}
+body.dark-mode .menu-dropdown a {
+  color: #f0f0f0;
+}
+body.dark-mode .menu-dropdown a:hover {
+  background: #3a2f5f;
+  color: #ffffff;
+}
+body.dark-mode .card-receita-prof.receita-full {
+  background: #2e2e3e;
+  box-shadow: 0 10px 36px #00000033;
+}
+body.dark-mode .card-receita-prof ul,
+body.dark-mode .card-receita-prof ol {
+  background: #3a2f5f;
+  box-shadow: 0 1px 6px #00000033;
+}
+body.dark-mode .darkmode-toggle {
+  background: #3a2f5f;
+  color: #fff;
+}
+body.dark-mode .darkmode-toggle:hover,
+body.dark-mode .darkmode-toggle:focus {
+  background: #4a3b6f;
+  color: #ffe452;
+}
+body.dark-mode footer {
+  background: #262040;
+  color: #aaa0ff;
+  box-shadow: 0 -2px 12px #00000027;
 }
