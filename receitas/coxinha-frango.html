@@ -1,24 +1,74 @@
-<article id="coxinha-frango" class="receita">
-  <h2>Coxinha de Frango</h2>
-  <h3>Ingredientes</h3>
-  <ul>
-    <li>2 peitos de frango cozidos e desfiados</li>
-    <li>1 cebola picada</li>
-    <li>2 dentes de alho picados</li>
-    <li>1 colher de sopa de azeite</li>
-    <li>1/2 chávena de salsa picada</li>
-    <li>2 chávenas de farinha de trigo</li>
-    <li>2 chávenas de caldo de galinha</li>
-    <li>Sal, pimenta e noz-moscada a gosto</li>
-    <li>Ovo e pão ralado para panar</li>
-    <li>Óleo para fritar</li>
-  </ul>
-  <h3>Preparação</h3>
-  <ol>
-    <li>Refoga a cebola e o alho no azeite. Junta o frango, tempera com salsa, sal, pimenta e noz-moscada.</li>
-    <li>À parte, aquece o caldo de galinha e junta a farinha, mexendo até formar uma massa.</li>
-    <li>Deixa arrefecer, molda pequenas porções de massa, recheia com frango e fecha em forma de coxinha.</li>
-    <li>Passa por ovo batido e pão ralado.</li>
-    <li>Frita em óleo bem quente até dourar. Escorre em papel e serve quente.</li>
-  </ol>
-</article>
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Coxinha de Frango | Receitas Colaborativas</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-content">
+      <a href="/trabalho/src/index.html" class="nav-logo" aria-label="Página Principal">🍽️</a>
+      <span class="nav-title">Receitas Colaborativas</span>
+      <form class="nav-search" action="/pesquisa.html" method="GET">
+        <input type="text" name="q" placeholder="Procure receita, ingrediente...">
+        <button type="submit" aria-label="Pesquisar">🔎</button>
+      </form>
+      <nav class="nav-menu">
+        <button class="menu-btn" aria-haspopup="true" aria-expanded="false">Comidas ▾</button>
+        <ul class="menu-dropdown">
+          <li><a href="/receitas/brigadeiro.html">Brigadeiro</a></li>
+          <li><a href="/receitas/coxinha-frango.html">Coxinha de Frango</a></li>
+          <li><a href="/receitas/feijoada.html">Feijoada</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <article class="card-receita-prof" style="margin:4rem auto 2.5rem;max-width:440px;">
+      <span class="emoji">🥟</span>
+      <h1 style="font-size:2.1rem;margin-bottom:2px;">Coxinha de Frango</h1>
+      <p style="color:#8d60bb;margin-bottom:14px;">O salgado favorito do Brasil: massa macia, recheio suculento!</p>
+      <h3>Ingredientes</h3>
+      <ul>
+        <li>2 peitos de frango cozidos e desfiados</li>
+        <li>1 cebola picada</li>
+        <li>2 dentes de alho picados</li>
+        <li>1 colher de sopa de azeite</li>
+        <li>1/2 chávena de salsa picada</li>
+        <li>2 chávenas de farinha de trigo</li>
+        <li>2 chávenas de caldo de galinha</li>
+        <li>Sal, pimenta e noz-moscada a gosto</li>
+        <li>Ovo e pão ralado para panar</li>
+        <li>Óleo para fritar</li>
+      </ul>
+      <h3>Preparação</h3>
+      <ol>
+        <li>Refoga a cebola e o alho no azeite. Junta o frango, tempera com salsa, sal, pimenta e noz-moscada.</li>
+        <li>À parte, aquece o caldo de galinha e junta a farinha, mexendo até formar uma massa.</li>
+        <li>Deixa arrefecer, molda pequenas porções de massa, recheia com frango e fecha em forma de coxinha.</li>
+        <li>Passa por ovo batido e pão ralado.</li>
+        <li>Frita em óleo bem quente até dourar. Escorre em papel e serve quente.</li>
+      </ol>
+    </article>
+  </main>
+<footer>
+    Projeto colaborativo no GitHub · <span id="ano"></span>
+  </footer>
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+    // Dropdown menu do navbar
+    document.querySelector('.menu-btn').onclick = function () {
+      document.querySelector('.menu-dropdown').classList.toggle('show');
+      this.setAttribute('aria-expanded', document.querySelector('.menu-dropdown').classList.contains('show'));
+    };
+    document.body.addEventListener('click', function(e){
+      if (!e.target.closest('.nav-menu')) {
+        document.querySelector('.menu-dropdown').classList.remove('show');
+        document.querySelector('.menu-btn').setAttribute('aria-expanded','false');
+      }
+    });
+  </script>
+</body>
+</html>
