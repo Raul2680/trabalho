@@ -53,6 +53,22 @@
       </ol>
     </article>
   </main>
-  <!-- footer e script igual -->
+<footer>
+    Projeto colaborativo no GitHub · <span id="ano"></span>
+  </footer>
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+    // Dropdown menu do navbar
+    document.querySelector('.menu-btn').onclick = function () {
+      document.querySelector('.menu-dropdown').classList.toggle('show');
+      this.setAttribute('aria-expanded', document.querySelector('.menu-dropdown').classList.contains('show'));
+    };
+    document.body.addEventListener('click', function(e){
+      if (!e.target.closest('.nav-menu')) {
+        document.querySelector('.menu-dropdown').classList.remove('show');
+        document.querySelector('.menu-btn').setAttribute('aria-expanded','false');
+      }
+    });
+  </script>
 </body>
 </html>
