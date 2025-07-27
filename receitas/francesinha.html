@@ -2,12 +2,11 @@
 <html lang="pt-pt">
 <head>
   <meta charset="UTF-8">
-  <title>Receitas Colaborativas</title>
+  <title>Francesinha | Receitas Colaborativas</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/trabalho/src/style.css">
 </head>
 <body>
-  <!-- NAVBAR PROFISSIONAL -->
   <header class="navbar">
     <div class="navbar-content">
       <a href="/trabalho/src/index.html" class="nav-logo" aria-label="Página Principal">🍽️</a>
@@ -19,39 +18,45 @@
       <nav class="nav-menu">
         <button class="menu-btn" aria-haspopup="true" aria-expanded="false">Comidas ▾</button>
         <ul class="menu-dropdown">
-          <li><a href="/trabalho/receitas/brigadeiro.html">Brigadeiro</a></li>
-          <li><a href="/trabalho/receitas/coxinha-frango.html">Coxinha de Frango</a></li>
-          <li><a href="/trabalho/receitas/feijoada.html">Feijoada</a></li>
+          <li><a href="/trabalho/receitas/pastel-nata.html">Pastel de Nata</a></li>
           <li><a href="/trabalho/receitas/francesinha.html">Francesinha</a></li>
-          <li><a href="/trabalho/receitas/arroz-de-pato.html">Arroz de Pato</a></li>
-          <li><a href="/trabalho/receitas/pastel-de-nata.html">Pastel de Nata</a></li>
+          <li><a href="/trabalho/receitas/arroz-pato.html">Arroz de Pato</a></li>
         </ul>
       </nav>
     </div>
   </header>
-
   <main>
-    <!-- Aqui entra o conteúdo do site (ex: grid de receitas) -->
-    <section style="padding:3rem 0;">
-      <h1 style="text-align:center;font-weight:800;">Bem-vindo ao Projeto Receitas Colaborativas!</h1>
-      <p style="text-align:center;max-width:460px;margin:1.3rem auto;font-size:1.15rem;">
-        Use a barra de pesquisa acima para procurar receitas ou explore via o menu “Comidas”.
-      </p>
-      <!-- ... restante do conteúdo ... -->
-    </section>
+    <article class="card-receita-prof" style="margin:4rem auto 2.5rem;max-width:440px;">
+      <span class="emoji">🥪</span>
+      <h1 style="font-size:2.1rem;margin-bottom:2px;">Francesinha</h1>
+      <p style="color:#8d60bb;margin-bottom:14px;">Prato típico do Porto, coberta com queijo e molho especial.</p>
+      <h3>Ingredientes</h3>
+      <ul>
+        <li>2 fatias de pão de forma</li>
+        <li>1 bife de vaca grelhado</li>
+        <li>1 salsicha fresca</li>
+        <li>1 linguiça</li>
+        <li>Fiambre e queijo fatiado</li>
+        <li>Molho de francesinha (cerveja, tomate, piri-piri, etc.)</li>
+      </ul>
+      <h3>Preparação</h3>
+      <ol>
+        <li>Grelhe o bife, a salsicha e a linguiça.</li>
+        <li>Monte a sanduíche com pão, fiambre, carne e queijo.</li>
+        <li>Cubra com mais queijo e leve ao forno para derreter.</li>
+        <li>Regue com o molho quente e sirva com batatas fritas.</li>
+      </ol>
+    </article>
   </main>
-
   <footer>
-    Projeto colaborativo no GitHub &middot; <span id="ano"></span>
+    Projeto colaborativo no GitHub · <span id="ano"></span>
   </footer>
   <script>
     document.getElementById('ano').textContent = new Date().getFullYear();
-    // Abre/fecha dropdown no clique (acessibilidade simples)
     document.querySelector('.menu-btn').onclick = function () {
       document.querySelector('.menu-dropdown').classList.toggle('show');
       this.setAttribute('aria-expanded', document.querySelector('.menu-dropdown').classList.contains('show'));
     };
-    // Fecha dropdown ao clicar fora
     document.body.addEventListener('click', function(e){
       if (!e.target.closest('.nav-menu')) {
         document.querySelector('.menu-dropdown').classList.remove('show');
