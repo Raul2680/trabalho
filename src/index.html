@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <title>Receitas Colaborativas</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- ligação ao CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="gradient-bg"></div>
   <header>
     <h1>Receitas Colaborativas</h1>
     <p>Colabora, aprende e partilha as tuas melhores receitas, organizando o trabalho com GitHub!</p>
@@ -13,86 +16,29 @@
 
   <nav>
     <ul>
-      <li><a href="#brigadeiro">Brigadeiro</a></li>
-      <li><a href="#coxinha-frango">Coxinha de Frango</a></li>
-      <li><a href="#feijoada">Feijoada</a></li>
+      <li><a href="/receitas/brigadeiro.html">Brigadeiro</a></li>
+      <li><a href="/receitas/coxinha-frango.html">Coxinha de Frango</a></li>
+      <li><a href="/receitas/feijoada.html">Feijoada</a></li>
     </ul>
   </nav>
 
   <main>
-    <section id="receitas">
+    <section id="grid-receitas">
       <h2>Receitas</h2>
-
-      <article id="brigadeiro" class="receita">
-        <h3>Brigadeiro</h3>
-        <h4>Ingredientes</h4>
-        <ul>
-          <li>1 lata de leite condensado</li>
-          <li>1 colher de sopa de manteiga</li>
-          <li>7 colheres de sopa de chocolate em pó</li>
-          <li>Granulado para enrolar</li>
-        </ul>
-        <h4>Preparação</h4>
-        <ol>
-          <li>Numa panela, misture o leite condensado, a manteiga e o chocolate em pó.</li>
-          <li>Cozinhe em fogo médio, mexendo sempre, até começar a soltar do fundo da panela (ponto de brigadeiro).</li>
-          <li>Deixe esfriar.</li>
-          <li>Enrole em pequenas bolinhas e passe no granulado.</li>
-          <li>Sirva e aproveite!</li>
-        </ol>
-      </article>
-
-      <article id="coxinha-frango" class="receita">
-        <h3>Coxinha de Frango</h3>
-        <h4>Ingredientes</h4>
-        <ul>
-          <li>2 peitos de frango cozidos e desfiados</li>
-          <li>1 cebola picada</li>
-          <li>2 dentes de alho picados</li>
-          <li>1 colher de sopa de azeite</li>
-          <li>1/2 chávena de salsa picada</li>
-          <li>2 chávenas de farinha de trigo</li>
-          <li>2 chávenas de caldo de galinha</li>
-          <li>Sal, pimenta e noz-moscada a gosto</li>
-          <li>Ovo e pão ralado para panar</li>
-          <li>Óleo para fritar</li>
-        </ul>
-        <h4>Preparação</h4>
-        <ol>
-          <li>Refoga a cebola e o alho no azeite. Junta o frango, tempera com salsa, sal, pimenta e noz-moscada.</li>
-          <li>À parte, aquece o caldo de galinha e junta a farinha, mexendo até formar uma massa.</li>
-          <li>Deixa arrefecer, molda pequenas porções de massa, recheia com frango e fecha em forma de coxinha.</li>
-          <li>Passa por ovo batido e pão ralado.</li>
-          <li>Frita em óleo bem quente até dourar. Escorre em papel e serve quente.</li>
-        </ol>
-      </article>
-
-      <article id="feijoada" class="receita">
-        <h3>Feijoada</h3>
-        <h4>Ingredientes</h4>
-        <ul>
-          <li>500g de feijão preto</li>
-          <li>200g de carne seca dessalgada</li>
-          <li>150g de linguiça defumada</li>
-          <li>100g de costela de porco</li>
-          <li>1 cebola média picada</li>
-          <li>3 dentes de alho picados</li>
-          <li>2 folhas de louro</li>
-          <li>Sal e pimenta a gosto</li>
-          <li>Água suficiente para cozer</li>
-        </ul>
-        <h4>Preparação</h4>
-        <ol>
-          <li>Demolhe o feijão e as carnes previamente (dessalgue a carne seca por pelo menos 24h, trocando a água algumas vezes).</li>
-          <li>Coza o feijão com as folhas de louro até ficar macio.</li>
-          <li>À parte, refogue a cebola e o alho até dourar.</li>
-          <li>Acrescente as carnes e a linguiça na panela com o feijão e deixe cozer tudo junto até as carnes estarem bem macias.</li>
-          <li>Ajuste o sal e a pimenta.</li>
-          <li>Sirva com arroz branco, couve refogada e laranja fatiada.</li>
-        </ol>
-        <h4>Tempo de cozedura</h4>
-        <p>2 horas e 30 minutos</p>
-      </article>
+      <div class="receitas-grid">
+        <a href="/receitas/brigadeiro.html" class="card-receita">
+          <span class="emoji">🍫</span>
+          <span class="titulo">Brigadeiro</span>
+        </a>
+        <a href="/receitas/coxinha-frango.html" class="card-receita">
+          <span class="emoji">🥟</span>
+          <span class="titulo">Coxinha de Frango</span>
+        </a>
+        <a href="/receitas/feijoada.html" class="card-receita">
+          <span class="emoji">🍲</span>
+          <span class="titulo">Feijoada</span>
+        </a>
+      </div>
     </section>
   </main>
 
