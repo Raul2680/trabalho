@@ -1,26 +1,78 @@
-<article id="feijoada" class="receita">
-  <h2>Feijoada</h2>
-  <h3>Ingredientes</h3>
-  <ul>
-    <li>500g de feijão preto</li>
-    <li>200g de carne seca dessalgada</li>
-    <li>150g de linguiça defumada</li>
-    <li>100g de costela de porco</li>
-    <li>1 cebola média picada</li>
-    <li>3 dentes de alho picados</li>
-    <li>2 folhas de louro</li>
-    <li>Sal e pimenta a gosto</li>
-    <li>Água suficiente para cozer</li>
-  </ul>
-  <h3>Preparação</h3>
-  <ol>
-    <li>Demolhe o feijão e as carnes previamente (dessalgue a carne seca por pelo menos 24h, trocando a água algumas vezes).</li>
-    <li>Coza o feijão com as folhas de louro até ficar macio.</li>
-    <li>À parte, refogue a cebola e o alho até dourar.</li>
-    <li>Acrescente as carnes e a linguiça na panela com o feijão e deixe cozer tudo junto até as carnes estarem bem macias.</li>
-    <li>Ajuste o sal e a pimenta.</li>
-    <li>Sirva com arroz branco, couve refogada e laranja fatiada.</li>
-  </ol>
-  <h3>Tempo de cozedura</h3>
-  <p>2 horas e 30 minutos</p>
-</article>
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Feijoada | Receitas Colaborativas</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-content">
+      <a href="/trabalho/src/index.html" class="nav-logo" aria-label="Página Principal">🍽️</a>
+      <span class="nav-title">Receitas Colaborativas</span>
+      <form class="nav-search" action="/pesquisa.html" method="GET">
+        <input type="text" name="q" placeholder="Procure receita, ingrediente...">
+        <button type="submit" aria-label="Pesquisar">🔎</button>
+      </form>
+      <nav class="nav-menu">
+        <button class="menu-btn" aria-haspopup="true" aria-expanded="false">Comidas ▾</button>
+        <ul class="menu-dropdown">
+          <li><a href="/receitas/brigadeiro.html">Brigadeiro</a></li>
+          <li><a href="/receitas/coxinha-frango.html">Coxinha de Frango</a></li>
+          <li><a href="/receitas/feijoada.html">Feijoada</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <article class="card-receita-prof" style="margin:4rem auto 2.5rem;max-width:440px;">
+      <span class="emoji">🍲</span>
+      <h1 style="font-size:2.1rem;margin-bottom:2px;">Feijoada</h1>
+      <p style="color:#8d60bb;margin-bottom:14px;">A tradição servida à mesa: robusta, aromática e imperdível.</p>
+      <h3>Ingredientes</h3>
+      <ul>
+        <li>500g de feijão preto</li>
+        <li>200g de carne seca dessalgada</li>
+        <li>150g de linguiça defumada</li>
+        <li>100g de costela de porco</li>
+        <li>1 cebola média picada</li>
+        <li>3 dentes de alho picados</li>
+        <li>2 folhas de louro</li>
+        <li>Sal e pimenta a gosto</li>
+        <li>Água suficiente para cozer</li>
+      </ul>
+      <h3>Preparação</h3>
+      <ol>
+        <li>Demolhe o feijão e as carnes previamente (dessalgue a carne seca por pelo menos 24h, trocando a água algumas vezes).</li>
+        <li>Coza o feijão com as folhas de louro até ficar macio.</li>
+        <li>À parte, refogue a cebola e o alho até dourar.</li>
+        <li>Acrescente as carnes e a linguiça na panela com o feijão e deixe cozer tudo junto até as carnes estarem bem macias.</li>
+        <li>Ajuste o sal e a pimenta.</li>
+        <li>Sirva com arroz branco, couve refogada e laranja fatiada.</li>
+      </ol>
+      <h4 style="margin-top:1.2em;color:#46397a;">Tempo de cozedura</h4>
+      <p>2 horas e 30 minutos</p>
+    </article>
+  </main>
+<footer>
+    Projeto colaborativo no GitHub · <span id="ano"></span>
+  </footer>
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+    // Dropdown menu do navbar
+    document.querySelector('.menu-btn').onclick = function () {
+      document.querySelector('.menu-dropdown').classList.toggle('show');
+      this.setAttribute('aria-expanded', document.querySelector('.menu-dropdown').classList.contains('show'));
+    };
+    document.body.addEventListener('click', function(e){
+      if (!e.target.closest('.nav-menu')) {
+        document.querySelector('.menu-dropdown').classList.remove('show');
+        document.querySelector('.menu-btn').setAttribute('aria-expanded','false');
+      }
+    });
+  </script>
+</body>
+</html>
+
+
