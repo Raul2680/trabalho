@@ -6,31 +6,35 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="gradient-bg"></div>
   <header>
-    <h1>Receitas Colaborativas.</h1>
-    <p>Partilha e aprende a utilizar GitHub com receitas!</p>
+    <h1>🥄 Receitas Colaborativas</h1>
+    <p>Partilha, aprende e colabora com os teus colegas num ambiente inspirador!</p>
   </header>
   <main>
-    <section id="processo">
-      <h2>Como colaborar</h2>
+    <section>
+      <h2>Como Colaborar</h2>
       <ol>
-        <li>Saca o repositório usando <code>git clone</code>.</li>
-        <li>Cria uma branch para cada receita nova ou correção (<code>git checkout -b feature/nome-receita</code>).</li>
-        <li>Faz commits das tuas alterações.</li>
-        <li>Abre um Pull Request para integrar no projeto principal.</li>
-        <li>Utiliza Issues para propor melhorias ou assinalar problemas.</li>
+        <li><strong>Saca</strong> o repositório usando <code>git clone</code>.</li>
+        <li><strong>Cria uma branch</strong> para cada receita ou melhoria (<code>git checkout -b feature/nome-receita</code>).</li>
+        <li><strong>Faz commits</strong> das alterações.</li>
+        <li><strong>Abre um Pull Request</strong> para integrar ao projeto principal.</li>
+        <li><strong>Usa Issues</strong> para sugestões e resolução de problemas.</li>
       </ol>
     </section>
-    <section id="receitas">
-      <h2>Receitas em desenvolvimento</h2>
+    <section>
+      <h2>Receitas em Desenvolvimento</h2>
       <ul>
-        <li>feature/brigadeiro (Adição da receita de brigadeiro)</li>
-        <li>fix/tempo-feijoada (Correcção no tempo de cozedura da feijoada)</li>
+        <li>🍫 <b>feature/brigadeiro</b> <span>- Adição da receita de brigadeiro</span></li>
+        <li>🥘 <b>fix/tempo-feijoada</b> <span>- Correcção no tempo de cozedura da feijoada</span></li>
       </ul>
     </section>
   </main>
   <footer>
-    <p>Projeto de grupo · 2025</p>
+    Projeto de grupo · <span id="ano"></span>
   </footer>
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
