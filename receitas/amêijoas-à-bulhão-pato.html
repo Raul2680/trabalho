@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Amêijoas à Bulhão Pato | Receitas Colaborativas</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/trabalho/src/style.css">
+</head>
+<body>
+  <!-- NAVBAR PROFISSIONAL -->
+  <header class="navbar">
+    <div class="navbar-content">
+      <a href="/trabalho/src/index.html" class="nav-logo" aria-label="Página Principal">🍽️</a>
+      <span class="nav-title">Receitas Colaborativas</span>
+      <form class="nav-search" action="/pesquisa.html" method="GET">
+        <input type="text" name="q" placeholder="Procure receita, ingrediente...">
+        <button type="submit" aria-label="Pesquisar">🔎</button>
+      </form>
+      <nav class="nav-menu">
+        <button class="menu-btn" aria-haspopup="true" aria-expanded="false">Comidas ▾</button>
+        <ul class="menu-dropdown">
+          <li><a href="/trabalho/receitas/ameijoas-bulhao-pato.html">Amêijoas à Bulhão Pato</a></li>
+          <li><a href="/trabalho/receitas/coxinha-frango.html">Coxinha de Frango</a></li>
+          <li><a href="/trabalho/receitas/feijoada.html">Feijoada</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="card-receita-prof" style="margin:4rem auto 2.5rem;max-width:440px;">
+      <span class="emoji">🦪</span>
+      <h1 style="font-size:2.1rem;margin-bottom:2px;">Amêijoas à Bulhão Pato</h1>
+      <p style="color:#8d60bb;margin-bottom:14px;">Um petisco típico português, cheio de sabor e aroma.</p>
+      <h3>Ingredientes</h3>
+      <ul>
+        <li>1 kg de amêijoas</li>
+        <li>4 dentes de alho</li>
+        <li>80 ml de azeite</li>
+        <li>1 molho de coentros frescos</li>
+        <li>1 limão (sumo)</li>
+        <li>Sal e pimenta q.b.</li>
+        <li>100 ml de vinho branco (opcional)</li>
+      </ul>
+      <h3>Preparação</h3>
+      <ol>
+        <li>Coloque as amêijoas em água com sal durante 1-2 horas para largarem a areia. Lave bem.</li>
+        <li>Pique os alhos e refogue-os no azeite até libertarem aroma (não deixe queimar).</li>
+        <li>Junte as amêijoas, o vinho branco, sal e pimenta. Tape e cozinhe em lume forte até abrirem (3-5 minutos).</li>
+        <li>Adicione os coentros picados e o sumo de limão. Envolva bem.</li>
+        <li>Sirva de imediato com pão para molhar no molho delicioso.</li>
+      </ol>
+    </article>
+  </main>
+
+  <footer>
+    Projeto colaborativo no GitHub · <span id="ano"></span>
+  </footer>
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+    // Dropdown menu do navbar
+    document.querySelector('.menu-btn').onclick = function () {
+      document.querySelector('.menu-dropdown').classList.toggle('show');
+      this.setAttribute('aria-expanded', document.querySelector('.menu-dropdown').classList.contains('show'));
+    };
+    document.body.addEventListener('click', function(e){
+      if (!e.target.closest('.nav-menu')) {
+        document.querySelector('.menu-dropdown').classList.remove('show');
+        document.querySelector('.menu-btn').setAttribute('aria-expanded','false');
+      }
+    });
+  </script>
+</body>
+</html>
