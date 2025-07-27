@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Francesinha | Receitas Colaborativas</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/trabalho/src/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-content">
+      <a href="/trabalho/src/index.html" class="nav-logo" aria-label="Página Principal">🍽️</a>
+      <span class="nav-title">Receitas Colaborativas</span>
+      <form class="nav-search" action="/pesquisa.html" method="GET">
+        <input type="text" name="q" placeholder="Procure receita, ingrediente...">
+        <button type="submit" aria-label="Pesquisar">🔎</button>
+      </form>
+      <nav class="nav-menu">
+        <button class="menu-btn" aria-haspopup="true" aria-expanded="false">Comidas ▾</button>
+        <ul class="menu-dropdown">
+          <li><a href="/trabalho/receitas/pastel-nata.html">Pastel de Nata</a></li>
+          <li><a href="/trabalho/receitas/francesinha.html">Francesinha</a></li>
+          <li><a href="/trabalho/receitas/arroz-pato.html">Arroz de Pato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <article class="card-receita-prof" style="margin:4rem auto 2.5rem;max-width:440px;">
+      <span class="emoji">🥪</span>
+      <h1 style="font-size:2.1rem;margin-bottom:2px;">Francesinha</h1>
+      <p style="color:#8d60bb;margin-bottom:14px;">Sanduíche típica do Porto, coberta com queijo e molho especial.</p>
+      <h3>Ingredientes</h3>
+      <ul>
+        <li>2 fatias de pão de forma</li>
+        <li>1 bife de vaca grelhado</li>
+        <li>1 salsicha fresca</li>
+        <li>1 linguiça</li>
+        <li>Fiambre e queijo fatiado</li>
+        <li>Molho de francesinha (cerveja, tomate, piri-piri, etc.)</li>
+      </ul>
+      <h3>Preparação</h3>
+      <ol>
+        <li>Grelhe o bife, a salsicha e a linguiça.</li>
+        <li>Monte a sanduíche com pão, fiambre, carne e queijo.</li>
+        <li>Cubra com mais queijo e leve ao forno para derreter.</li>
+        <li>Regue com o molho quente e sirva com batatas fritas.</li>
+      </ol>
+    </article>
+  </main>
+  <footer>
+    Projeto colaborativo no GitHub · <span id="ano"></span>
+  </footer>
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+    document.querySelector('.menu-btn').onclick = function () {
+      document.querySelector('.menu-dropdown').classList.toggle('show');
+      this.setAttribute('aria-expanded', document.querySelector('.menu-dropdown').classList.contains('show'));
+    };
+    document.body.addEventListener('click', function(e){
+      if (!e.target.closest('.nav-menu')) {
+        document.querySelector('.menu-dropdown').classList.remove('show');
+        document.querySelector('.menu-btn').setAttribute('aria-expanded','false');
+      }
+    });
+  </script>
+</body>
+</html>
