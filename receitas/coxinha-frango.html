@@ -7,8 +7,24 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <!-- Mesmo header/navbar -->
-  <!-- ... navbar igual ... -->
+  <header class="navbar">
+    <div class="navbar-content">
+      <a href="/trabalho/src/index.html" class="nav-logo" aria-label="Página Principal">🍽️</a>
+      <span class="nav-title">Receitas Colaborativas</span>
+      <form class="nav-search" action="/pesquisa.html" method="GET">
+        <input type="text" name="q" placeholder="Procure receita, ingrediente...">
+        <button type="submit" aria-label="Pesquisar">🔎</button>
+      </form>
+      <nav class="nav-menu">
+        <button class="menu-btn" aria-haspopup="true" aria-expanded="false">Comidas ▾</button>
+        <ul class="menu-dropdown">
+          <li><a href="/receitas/brigadeiro.html">Brigadeiro</a></li>
+          <li><a href="/receitas/coxinha-frango.html">Coxinha de Frango</a></li>
+          <li><a href="/receitas/feijoada.html">Feijoada</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
   <main>
     <article class="card-receita-prof" style="margin:4rem auto 2.5rem;max-width:440px;">
       <span class="emoji">🥟</span>
