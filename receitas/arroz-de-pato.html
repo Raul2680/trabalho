@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Arroz de Pato | Receitas Colaborativas</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/trabalho/src/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-content">
+      <a href="/trabalho/src/index.html" class="nav-logo" aria-label="Página Principal">🍽️</a>
+      <span class="nav-title">Receitas Colaborativas</span>
+      <form class="nav-search" action="/pesquisa.html" method="GET">
+        <input type="text" name="q" placeholder="Procure receita, ingrediente...">
+        <button type="submit" aria-label="Pesquisar">🔎</button>
+      </form>
+      <nav class="nav-menu">
+        <button class="menu-btn" aria-haspopup="true" aria-expanded="false">Comidas ▾</button>
+        <ul class="menu-dropdown">
+          <li><a href="/trabalho/receitas/pastel-nata.html">Pastel de Nata</a></li>
+          <li><a href="/trabalho/receitas/francesinha.html">Francesinha</a></li>
+          <li><a href="/trabalho/receitas/arroz-pato.html">Arroz de Pato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <article class="card-receita-prof" style="margin:4rem auto 2.5rem;max-width:440px;">
+      <span class="emoji">🦆</span>
+      <h1 style="font-size:2.1rem;margin-bottom:2px;">Arroz de Pato</h1>
+      <p style="color:#8d60bb;margin-bottom:14px;">Prato tradicional português com pato desfiado e arroz aromático.</p>
+      <h3>Ingredientes</h3>
+      <ul>
+        <li>1 pato inteiro</li>
+        <li>2 chávenas de arroz</li>
+        <li>1 cebola</li>
+        <li>2 dentes de alho</li>
+        <li>1 folha de louro</li>
+        <li>Chouriço de carne</li>
+        <li>Sal e pimenta a gosto</li>
+      </ul>
+      <h3>Preparação</h3>
+      <ol>
+        <li>Cozinhe o pato com cebola, alho, louro e sal.</li>
+        <li>Desfie o pato e reserve o caldo.</li>
+        <li>Cozinhe o arroz no caldo do pato.</li>
+        <li>Num tabuleiro, alterne camadas de arroz e pato desfiado.</li>
+        <li>Decore com rodelas de chouriço e leve ao forno para dourar.</li>
+      </ol>
+    </article>
+  </main>
+  <footer>
+    Projeto colaborativo no GitHub · <span id="ano"></span>
+  </footer>
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+    document.querySelector('.menu-btn').onclick = function () {
+      document.querySelector('.menu-dropdown').classList.toggle('show');
+      this.setAttribute('aria-expanded', document.querySelector('.menu-dropdown').classList.contains('show'));
+    };
+    document.body.addEventListener('click', function(e){
+      if (!e.target.closest('.nav-menu')) {
+        document.querySelector('.menu-dropdown').classList.remove('show');
+        document.querySelector('.menu-btn').setAttribute('aria-expanded','false');
+      }
+    });
+  </script>
+</body>
+</html>
