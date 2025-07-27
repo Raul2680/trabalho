@@ -1,5 +1,3 @@
-Aqui está uma versão mais moderna, convidativa e visualmente rica do texto para sua página colaborativa de receitas no GitHub. O conteúdo ganhou estrutura clara, destaques, ícones e uma linguagem mais envolvente, transmitindo profissionalismo e entusiasmo do projeto.
-
 # 🍽️ Página Colaborativa de Receitas
 
 Bem-vindos ao nosso projeto onde a colaboração é o ingrediente principal! Aqui, cada integrante pode compartilhar suas melhores receitas e, ao mesmo tempo, aprender a usar o Git e o GitHub de forma prática.
@@ -38,7 +36,3 @@ Este repositório foi criado para reunir receitas incríveis, escritas e revisad
 - Qualidade e preenchimento do relatório final
 
 Vamos juntos construir um repositório cheio de sabor, aprendizado e colaboração! 🚀🧑‍🍳
-
-Se quiser ainda mais destaque, adicione emojis culinários, banners e personalize cores no README usando badges do Shields.io. Se precisar de um README já com markdown e todos esses elementos prontos, também posso montar para você!
-
-Sources
