@@ -4,44 +4,56 @@
   <meta charset="UTF-8">
   <title>Receitas Colaborativas</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Receitas Colaborativas</h1>
-    <p>Colabora, aprende e partilha as tuas melhores receitas, organizando o trabalho com GitHub!</p>
+  <header class="header-prof">
+    <div class="container-header">
+      <span class="logo">🍽️</span>
+      <div>
+        <h1>Receitas Colaborativas</h1>
+        <p class="subtitle">
+          Onde colaboração, sabor e código se encontram.
+        </p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/receitas/brigadeiro.html">Brigadeiro</a></li>
+          <li><a href="/receitas/coxinha-frango.html">Coxinha de Frango</a></li>
+          <li><a href="/receitas/feijoada.html">Feijoada</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-
-  <nav>
-    <ul>
-      <li><a href="/receitas/brigadeiro.html">Brigadeiro</a></li>
-      <li><a href="/receitas/coxinha-frango.html">Coxinha de Frango</a></li>
-      <li><a href="/receitas/feijoada.html">Feijoada</a></li>
-    </ul>
-  </nav>
 
   <main>
     <section id="grid-receitas">
-      <h2>Receitas</h2>
-      <div class="receitas-grid">
-        <a href="/receitas/brigadeiro.html" class="card-receita">
+      <h2 class="section-title">As Nossas Receitas</h2>
+      <div class="receitas-grid-prof">
+        <a href="/receitas/brigadeiro.html" class="card-receita-prof">
           <span class="emoji">🍫</span>
-          <span class="titulo">Brigadeiro</span>
+          <h3>Brigadeiro</h3>
+          <p>Um clássico brasileiro irresistível e fácil de fazer.</p>
+          <span class="vermais">Ver Receita &rarr;</span>
         </a>
-        <a href="/receitas/coxinha-frango.html" class="card-receita">
+        <a href="/receitas/coxinha-frango.html" class="card-receita-prof">
           <span class="emoji">🥟</span>
-          <span class="titulo">Coxinha de Frango</span>
+          <h3>Coxinha de Frango</h3>
+          <p>O salgadinho mais adorado, com recheio suculento e crocância perfeita.</p>
+          <span class="vermais">Ver Receita &rarr;</span>
         </a>
-        <a href="/receitas/feijoada.html" class="card-receita">
+        <a href="/receitas/feijoada.html" class="card-receita-prof">
           <span class="emoji">🍲</span>
-          <span class="titulo">Feijoada</span>
+          <h3>Feijoada</h3>
+          <p>Receita tradicional, robusta e cheia de sabor — como manda a tradição.</p>
+          <span class="vermais">Ver Receita &rarr;</span>
         </a>
       </div>
     </section>
   </main>
 
   <footer>
-    Projeto de grupo · <span id="ano"></span>
+    Projeto colaborativo organizado no GitHub &middot; <span id="ano"></span>
   </footer>
   <script>
     document.getElementById('ano').textContent = new Date().getFullYear();
