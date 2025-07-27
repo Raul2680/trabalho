@@ -1,255 +1,187 @@
-/* Fundo de gradiente animado em toda a página */
-html, body {
-  height: 100%;
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #f6f7fb;
+  color: #252545;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.header-prof {
+  background: #46397a;
+  box-shadow: 0 2px 20px #49387a22;
+  color: #fff;
+  border-radius: 0 0 24px 24px;
+  padding-bottom: 0.6rem;
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 1.2rem 2rem 0.6rem 2rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 2.7rem;
+  margin-right: 1.2rem;
+}
+
+.header-prof h1 {
+  font-size: 2.2rem;
+  margin: 0 0 2px;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}
+
+.subtitle {
+  color: #ddd7fa;
+  font-size: 1.02rem;
+  margin: 0;
+}
+
+.header-prof nav ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: 'Segoe UI', 'Montserrat', Arial, sans-serif;
-  color: #282542;
-  min-height: 100vh;
-  position: relative;
-  background: transparent;
+.header-prof nav a {
+  color: #dfdafe;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.07rem;
+  padding: 8px 17px;
+  border-radius: 8px;
+  transition: background .16s, color .21s;
 }
 
-/* Div do gradiente animado */
-.gradient-bg {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
-  background: linear-gradient(-45deg, #fbc2eb, #a18cd1, #fad0c4, #fcb69f, #89f7fe, #66a6ff, #e0c3fc, #8ec5fc);
-  background-size: 600% 600%;
-  z-index: -1;
-  animation: gradientMove 18s ease-in-out infinite;
-  will-change: background-position;
+.header-prof nav a:hover, .header-prof nav a:focus {
+  background: #ece8fa;
+  color: #49387a;
+  text-decoration: none;
 }
 
-.receitas-grid {
+/* secção principal */
+main {
+  max-width: 1050px;
+  margin: 38px auto 0;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 34px #cec5ef35;
+  padding: 3.2rem 2rem 2.1rem 2rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.14rem;
+  color: #46397a;
+  font-weight: 900;
+  margin-bottom: 2.4rem;
+  letter-spacing: 0.01em;
+}
+
+.receitas-grid-prof {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 2.2rem;
+  gap: 2.4rem;
   flex-wrap: wrap;
-  margin: 2.5rem 0;
 }
 
-.card-receita {
+.card-receita-prof {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 170px;
-  height: 170px;
-  background: rgba(243, 234, 255, 0.98);
-  border-radius: 18px;
-  box-shadow: 0 4px 24px #dab6f354;
-  color: #884ea0;
+  align-items: flex-start;
+  background: #f3f0fd;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px #b8addb55;
+  color: #3d296f;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1.23rem;
-  letter-spacing: 0.01em;
-  transition: transform 0.15s, box-shadow 0.3s, background 0.25s;
+  padding: 1.4rem 1.3rem 1.1rem 1.3rem;
+  width: 275px;
+  transition: transform 0.13s, box-shadow 0.28s, background 0.16s;
   cursor: pointer;
   position: relative;
+  border: 2.5px solid #ece8fa;
 }
 
-.card-receita:hover,
-.card-receita:focus {
-  transform: translateY(-5px) scale(1.04);
-  box-shadow: 0 8px 32px #b49ae8af;
-  background: #eee3fa;
+.card-receita-prof:hover,
+.card-receita-prof:focus {
+  background: #ece8fa;
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 32px #b49ae8b7;
+  border-color: #cabbf8;
+  z-index: 3;
 }
 
-.card-receita .emoji {
-  font-size: 2.7rem;
-  margin-bottom: 0.7rem;
+.card-receita-prof .emoji {
+  font-size: 2.3rem;
+  margin-bottom: 0.54rem;
   display: block;
 }
 
-.card-receita .titulo {
-  font-size: 1.23em;
-}
-
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  25% { background-position: 100% 50%; }
-  50% { background-position: 100% 0%; }
-  75% { background-position: 0% 100%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* HEADER estilizado */
-header {
-  background: rgba(34, 27, 66, 0.90);
-  color: #faf6fc;
-  padding: 2rem 1rem 1rem 1rem;
-  border-radius: 0 0 32px 32px;
-  text-align: center;
-  box-shadow: 0 2px 24px #b49ae844;
-  margin-bottom: 18px;
-}
-
-header h1 {
-  font-size: 2.7rem;
-  margin: 0 0 0.6rem;
+.card-receita-prof h3 {
+  font-size: 1.29rem;
   font-weight: 800;
-  letter-spacing: 1.5px;
-  text-shadow: 0 2px 9px #b49ae833;
+  color: #46397a;
+  margin: 0 0 0.5rem;
 }
 
-header p {
-  font-style: italic;
-  color: #e0b7ff;
-  font-size: 1.1rem;
-  letter-spacing: 0.03em;
-  margin-top: 0;
+.card-receita-prof p {
+  margin: 0 0 1.1rem;
+  font-size: 1rem;
+  color: #584d7c;
 }
 
-/* NAV BAR horizontal estilizada */
-nav {
-  width: 100%;
-  background: rgba(243, 244, 255, 0.92);
-  box-shadow: 0 2px 12px #d5caf867;
-  padding: 0.7rem 0;
-  margin-bottom: 18px;
-  border-bottom: 1.5px solid #a18cd1;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0; padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 36px;
-}
-
-nav ul li {
-  display: inline-block;
-}
-
-nav a {
-  text-decoration: none;
-  color: #884ea0;
+.card-receita-prof .vermais {
+  font-size: 0.97em;
+  color: #7260af;
+  margin-top: auto;
   font-weight: 700;
-  padding: 9px 18px;
-  font-size: 1.13rem;
-  border-radius: 7px;
-  transition: background 0.28s, color 0.25s;
+  letter-spacing: 0.015em;
+  transition: color 0.18s;
 }
 
-nav a:hover,
-nav a:focus {
-  background: #e6dbff;
-  color: #222;
-  box-shadow: 0 2px 8px #b49ae888;
+.card-receita-prof:hover .vermais {
+  color: #453876;
   text-decoration: underline;
 }
 
-/* MAIN e secções principais */
-main {
-  max-width: 900px;
-  margin: 20px auto 0 auto;
-  padding: 2.3rem 2rem 1.5rem 2rem;
-  background: rgba(255,255,255,0.97);
-  border-radius: 18px;
-  box-shadow: 0 6px 36px #bac7ef44;
-}
-
-h2, h3, h4 {
-  color: #884ea0;
-  font-weight: 700;
-  margin-top: 1.3em;
-  letter-spacing: 0.01em;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1.1rem;
-}
-h3 {
-  font-size: 1.47rem;
-  margin-bottom: 0.7rem;
-}
-h4 {
-  font-size: 1.1rem;
-  margin-bottom: 0.4rem;
-}
-
-/* ARTIGOS de receitas */
-article.receita {
-  background: rgba(247,242,255,0.92);
-  margin: 2.2em 0 1.8em 0;
-  padding: 1.6em 1.5em 1.1em 1.5em;
-  border-radius: 16px;
-  box-shadow: 0 2px 24px #dab6f3cc;
-  transition: box-shadow 0.4s, transform 0.2s;
-}
-
-article.receita:hover {
-  box-shadow: 0 4px 28px #b49ae8d5;
-  transform: translateY(-2px) scale(1.015);
-}
-
-/* LISTAS e receitas */
-ul, ol {
-  background: rgba(254, 251, 255, 0.90);
-  border-radius: 9px;
-  padding: 0.9em 1.2em;
-  box-shadow: 0 1px 6px #a894d733;
-  margin-bottom: 1.2em;
-}
-
-ul li,
-ol li {
-  margin-bottom: 0.45em;
-  line-height: 1.4;
-}
-
-/* Códigos inline */
-code {
-  background: #f6e6ff;
-  border-radius: 4px;
-  padding: 2px 7px;
-  font-size: 1em;
-  color: #884ea0;
-  font-family: 'Fira Mono', 'Consolas', monospace;
-}
-
-/* FOOTER fixo elegante */
 footer {
-  margin-top: 2.7em;
+  margin-top: 2.3em;
   text-align: center;
   color: #8d60bb;
-  background: rgba(255,255,255,0.77);
-  padding: 1rem 0.4rem;
+  background: #faf6fd;
+  padding: 1.2rem 0.6rem;
   font-weight: 500;
   border-radius: 18px 18px 0 0;
-  box-shadow: 0 -2px 16px #b49ae87b;
+  box-shadow: 0 -2px 12px #a689ef27;
 }
 
-/* Responsividade para mobile */
-@media (max-width: 1020px) {
-  main {
-    padding: 1em 0.7em;
-    max-width: 96vw;
+/* Responsivo */
+@media (max-width: 1200px) {
+  .container-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
   }
-  nav ul {
-    gap: 12px;
+  .header-prof nav ul {
+    margin-top: 0.6rem;
   }
 }
-@media (max-width: 600px) {
-  header {
-    padding: 1.3rem 0.6rem;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 0px;
-  }
-  nav ul li {
-    margin-bottom: 7px;
-  }
-  article.receita {
+@media (max-width: 870px) {
+  main {
     padding: 1.2em 0.7em;
+    max-width: 98vw;
+  }
+  .receitas-grid-prof {
+    flex-direction: column;
+    gap: 1.1rem;
+    align-items: center;
   }
 }
