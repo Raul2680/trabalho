@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Carne de Porco à Alentejana | Receitas Colaborativas</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/trabalho/src/style.css">
+</head>
+<body>
+  <!-- NAVBAR PROFISSIONAL -->
+  <header class="navbar">
+    <div class="navbar-content">
+      <a href="/trabalho/src/index.html" class="nav-logo" aria-label="Página Principal">🍽️</a>
+      <span class="nav-title">Receitas Colaborativas</span>
+      <form class="nav-search" action="/pesquisa.html" method="GET">
+        <input type="text" name="q" placeholder="Procure receita, ingrediente...">
+        <button type="submit" aria-label="Pesquisar">🔎</button>
+      </form>
+      <nav class="nav-menu">
+        <button class="menu-btn" aria-haspopup="true" aria-expanded="false">Comidas ▾</button>
+        <ul class="menu-dropdown">
+          <li><a href="/trabalho/receitas/carne-porco-alentejana.html">Carne de Porco à Alentejana</a></li>
+          <li><a href="/trabalho/receitas/ameijoas-bulhao-pato.html">Amêijoas à Bulhão Pato</a></li>
+          <li><a href="/trabalho/receitas/feijoada.html">Feijoada</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="card-receita-prof" style="margin:4rem auto 2.5rem;max-width:480px;">
+      <span class="emoji">🥘</span>
+      <h1 style="font-size:2.1rem;margin-bottom:2px;">Carne de Porco à Alentejana</h1>
+      <p style="color:#8d60bb;margin-bottom:14px;">Um prato típico do Alentejo, com carne, amêijoas e batatas fritas.</p>
+      <h3>Ingredientes</h3>
+      <ul>
+        <li>800 g de carne de porco (lombo ou pá)</li>
+        <li>500 g de amêijoas</li>
+        <li>3 dentes de alho picados</li>
+        <li>2 folhas de louro</li>
+        <li>2 colheres de sopa de massa de pimentão</li>
+        <li>150 ml de vinho branco</li>
+        <li>Azeite q.b.</li>
+        <li>Sal e pimenta q.b.</li>
+        <li>1 colher de chá de colorau (opcional)</li>
+        <li>Coentros frescos picados</li>
+        <li>800 g de batatas para fritar</li>
+      </ul>
+      <h3>Preparação</h3>
+      <ol>
+        <li>Corte a carne em cubos e tempere com massa de pimentão, alho, louro, vinho branco, sal e pimenta. Deixe marinar 2 horas.</li>
+        <li>Coloque as amêijoas em água com sal para largarem a areia, depois lave bem.</li>
+        <li>Corte as batatas em cubos e frite até ficarem douradas. Reserve.</li>
+        <li>Aqueça azeite num tacho, frite a carne escorrida da marinada. Junte a marinada e deixe reduzir.</li>
+        <li>Adicione as amêijoas e cozinhe tapado até abrirem. Envolva as batatas, polvilhe com coentros e sirva de imediato.</li>
+      </ol>
+    </article>
+  </main>
+
+  <footer>
+    Projeto colaborativo no GitHub · <span id="ano"></span>
+  </footer>
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+    // Dropdown menu do navbar
+    document.querySelector('.menu-btn').onclick = function () {
+      document.querySelector('.menu-dropdown').classList.toggle('show');
+      this.setAttribute('aria-expanded', document.querySelector('.menu-dropdown').classList.contains('show'));
+    };
+    document.body.addEventListener('click', function(e){
+      if (!e.target.closest('.nav-menu')) {
+        document.querySelector('.menu-dropdown').classList.remove('show');
+        document.querySelector('.menu-btn').setAttribute('aria-expanded','false');
+      }
+    });
+  </script>
+</body>
+</html>
