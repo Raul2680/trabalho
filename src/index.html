@@ -7,142 +7,81 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Background com gradiente para efeito glass -->
-  <div class="background-gradient"></div>
-  
-  <!-- Navbar com efeito glassmorphism -->
-  <nav class="glass-navbar">
-    <div class="navbar-content">
-      <!-- Menu Hamburger à esquerda -->
-      <button class="hamburger-menu" id="hamburger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      
-      <!-- Título central com hiperligação -->
-      <a href="index.html" class="navbar-title">🍽️ Receitas Glass</a>
-      
-      <!-- Menu lateral (inicialmente oculto) -->
-      <div class="side-menu" id="sideMenu">
-        <div class="menu-header">
-          <h3>Menu</h3>
-          <button class="close-menu" id="closeMenu">&times;</button>
-        </div>
-        <ul>
-          <li><a href="#home">Início</a></li>
-          <li><a href="#receitas">Receitas</a></li>
-          <li><a href="#doces">Doces</a></li>
-          <li><a href="#salgados">Salgados</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-        </ul>
+  <!-- NAVBAR GLASSMORPHIC -->
+  <header class="navbar">
+    <div class="hamburger" id="hamburger" aria-label="Menu" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <a href="index.html" class="site-title">🍽️ Receitas Glass</a>
+  </header>
+
+  <!-- MENU LATERAL -->
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Receitas</a></li>
+      <li><a href="#">Doces</a></li>
+      <li><a href="#">Salgados</a></li>
+      <li><a href="#">Sobre</a></li>
+    </ul>
+  </nav>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <main>
+    <div class="receitas-container">
+      <h2>Receitas de Destaque</h2>
+      <div class="receitas-grid">
+        <a href="#" class="receita-card">
+          <div class="receita-icon">🍫</div>
+          <div class="receita-title">Brigadeiro</div>
+        </a>
+        <a href="#" class="receita-card">
+          <div class="receita-icon">🥟</div>
+          <div class="receita-title">Coxinha de Frango</div>
+        </a>
+        <a href="#" class="receita-card">
+          <div class="receita-icon">🍲</div>
+          <div class="receita-title">Feijoada</div>
+        </a>
+        <a href="#" class="receita-card">
+          <div class="receita-icon">🥧</div>
+          <div class="receita-title">Pastel de Nata</div>
+        </a>
+        <a href="#" class="receita-card">
+          <div class="receita-icon">🍝</div>
+          <div class="receita-title">Lasanha</div>
+        </a>
+        <a href="#" class="receita-card">
+          <div class="receita-icon">🍛</div>
+          <div class="receita-title">Curry de Legumes</div>
+        </a>
       </div>
     </div>
-  </nav>
-
-  <!-- Overlay para fechar menu -->
-  <div class="menu-overlay" id="menuOverlay"></div>
-
-  <!-- Conteúdo principal -->
-  <main>
-    <section class="receitas-section">
-      <h2 class="section-title">Nossas Receitas</h2>
-      
-      <!-- Row de receitas com cards glass -->
-      <div class="receitas-row">
-        <article class="glass-card">
-          <div class="card-image">🍫</div>
-          <h3>Brigadeiro</h3>
-          <p>Doce brasileiro clássico</p>
-          <a href="#" class="glass-button">Ver Receita</a>
-        </article>
-        
-        <article class="glass-card">
-          <div class="card-image">🥟</div>
-          <h3>Coxinha</h3>
-          <p>Salgado crocante tradicional</p>
-          <a href="#" class="glass-button">Ver Receita</a>
-        </article>
-        
-        <article class="glass-card">
-          <div class="card-image">🍲</div>
-          <h3>Feijoada</h3>
-          <p>Prato típico brasileiro</p>
-          <a href="#" class="glass-button">Ver Receita</a>
-        </article>
-        
-        <article class="glass-card">
-          <div class="card-image">🥧</div>
-          <h3>Pastel de Nata</h3>
-          <p>Doce português famoso</p>
-          <a href="#" class="glass-button">Ver Receita</a>
-        </article>
-        
-        <article class="glass-card">
-          <div class="card-image">🍝</div>
-          <h3>Lasanha</h3>
-          <p>Massa italiana cremosa</p>
-          <a href="#" class="glass-button">Ver Receita</a>
-        </article>
-        
-        <article class="glass-card">
-          <div class="card-image">🍛</div>
-          <h3>Curry</h3>
-          <p>Especiarias do oriente</p>
-          <a href="#" class="glass-button">Ver Receita</a>
-        </article>
-      </div>
-    </section>
   </main>
 
-  <!-- Footer com efeito glass -->
-  <footer class="glass-footer">
-    <p>&copy; 2025 Receitas Glass - Design Liquid Glass</p>
+  <footer>
+    <div class="footer-content">
+      <span>&copy; 2025 Receitas Glass — Todos os direitos reservados</span>
+    </div>
   </footer>
 
   <script>
-    // Menu hamburger functionality
+    // Menu hamburger funcional
     const hamburger = document.getElementById('hamburger');
-    const sideMenu = document.getElementById('sideMenu');
-    const closeMenu = document.getElementById('closeMenu');
-    const menuOverlay = document.getElementById('menuOverlay');
-
-    hamburger.addEventListener('click', () => {
-      sideMenu.classList.add('active');
-      menuOverlay.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
-
-    closeMenu.addEventListener('click', () => {
-      sideMenu.classList.remove('active');
-      menuOverlay.classList.remove('active');
-      document.body.style.overflow = 'auto';
-    });
-
-    menuOverlay.addEventListener('click', () => {
-      sideMenu.classList.remove('active');
-      menuOverlay.classList.remove('active');
-      document.body.style.overflow = 'auto';
-    });
-
-    // Animação suave nos cards
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    hamburger.onclick = function () {
+      this.classList.toggle('active');
+      sidebar.classList.toggle('open');
+      overlay.classList.toggle('show');
     };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.animationDelay = `${Math.random() * 0.5}s`;
-          entry.target.classList.add('animate-in');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.glass-card').forEach(card => {
-      observer.observe(card);
-    });
+    overlay.onclick = function () {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('show');
+      hamburger.classList.remove('active');
+    };
   </script>
 </body>
 </html>
