@@ -2,64 +2,147 @@
 <html lang="pt-pt">
 <head>
   <meta charset="UTF-8">
-  <title>Receitas Premium</title>
+  <title>Receitas Glass</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="main-header">
-    <a href="index.html" class="header-logo" aria-label="Página principal">🍴</a>
-    <h1 class="header-title">Receitas Premium</h1>
-    <form class="header-search" action="#" method="GET">
-      <input type="text" name="q" placeholder="Pesquisar receitas...">
-      <button type="submit">🔎</button>
-    </form>
-    <nav class="header-nav">
-      <a href="#destaques">Destaques</a>
-      <a href="#sobremesas">Sobremesas</a>
-      <a href="#salgados">Salgados</a>
-      <a href="#sobre">Sobre</a>
-    </nav>
-  </header>
+  <!-- Background com gradiente para efeito glass -->
+  <div class="background-gradient"></div>
+  
+  <!-- Navbar com efeito glassmorphism -->
+  <nav class="glass-navbar">
+    <div class="navbar-content">
+      <!-- Menu Hamburger à esquerda -->
+      <button class="hamburger-menu" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Título central com hiperligação -->
+      <a href="index.html" class="navbar-title">🍽️ Receitas Glass</a>
+      
+      <!-- Menu lateral (inicialmente oculto) -->
+      <div class="side-menu" id="sideMenu">
+        <div class="menu-header">
+          <h3>Menu</h3>
+          <button class="close-menu" id="closeMenu">&times;</button>
+        </div>
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#receitas">Receitas</a></li>
+          <li><a href="#doces">Doces</a></li>
+          <li><a href="#salgados">Salgados</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <section class="banner">
-    <h2>Sabor, Inovação e Apresentação</h2>
-    <p>Descobre as melhores receitas com fotos inspiradoras e dicas de chefs.<br>Explora, guarda e partilha os teus favoritos!</p>
-  </section>
+  <!-- Overlay para fechar menu -->
+  <div class="menu-overlay" id="menuOverlay"></div>
 
+  <!-- Conteúdo principal -->
   <main>
-    <section id="destaques" class="grid-section">
-      <h3>🍽️ Receitas em Destaque</h3>
-      <div class="receita-grid">
-        <article class="card">
-          <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg" alt="Brigadeiro gourmet" />
-          <h4>Brigadeiro Gourmet</h4>
-          <p>O clássico brasileiro com chocolate 70%, macio e tentador.</p>
-          <a href="#">Ver receita</a>
+    <section class="receitas-section">
+      <h2 class="section-title">Nossas Receitas</h2>
+      
+      <!-- Row de receitas com cards glass -->
+      <div class="receitas-row">
+        <article class="glass-card">
+          <div class="card-image">🍫</div>
+          <h3>Brigadeiro</h3>
+          <p>Doce brasileiro clássico</p>
+          <a href="#" class="glass-button">Ver Receita</a>
         </article>
-        <article class="card">
-          <img src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg" alt="Coxinha de frango" />
-          <h4>Coxinha de Frango</h4>
-          <p>Casca dourada, recheio suculento e sabor de festa a cada dentada.</p>
-          <a href="#">Ver receita</a>
+        
+        <article class="glass-card">
+          <div class="card-image">🥟</div>
+          <h3>Coxinha</h3>
+          <p>Salgado crocante tradicional</p>
+          <a href="#" class="glass-button">Ver Receita</a>
         </article>
-        <article class="card">
-          <img src="https://images.pexels.com/photos/167965/pexels-photo-167965.jpeg" alt="Feijoada tradicional" />
-          <h4>Feijoada Clássica</h4>
-          <p>Receita robusta e aromática, perfeita para reunir a família e amigos.</p>
-          <a href="#">Ver receita</a>
+        
+        <article class="glass-card">
+          <div class="card-image">🍲</div>
+          <h3>Feijoada</h3>
+          <p>Prato típico brasileiro</p>
+          <a href="#" class="glass-button">Ver Receita</a>
+        </article>
+        
+        <article class="glass-card">
+          <div class="card-image">🥧</div>
+          <h3>Pastel de Nata</h3>
+          <p>Doce português famoso</p>
+          <a href="#" class="glass-button">Ver Receita</a>
+        </article>
+        
+        <article class="glass-card">
+          <div class="card-image">🍝</div>
+          <h3>Lasanha</h3>
+          <p>Massa italiana cremosa</p>
+          <a href="#" class="glass-button">Ver Receita</a>
+        </article>
+        
+        <article class="glass-card">
+          <div class="card-image">🍛</div>
+          <h3>Curry</h3>
+          <p>Especiarias do oriente</p>
+          <a href="#" class="glass-button">Ver Receita</a>
         </article>
       </div>
     </section>
-
-    <section id="sobre" class="sobre">
-      <h3>Sobre o site</h3>
-      <p>Este portal foi criado para quem aprecia receitas bem explicadas, bonitas e compatíveis com todos os dispositivos. Cada receita tem ingredientes claros, passo a passo, imagens e truques para garantir resultados de chef em casa.</p>
-    </section>
   </main>
 
-  <footer>
-    <span>&copy; 2025 Receitas Premium · Desenvolvido para apaixonados de gastronomia.</span>
+  <!-- Footer com efeito glass -->
+  <footer class="glass-footer">
+    <p>&copy; 2025 Receitas Glass - Design Liquid Glass</p>
   </footer>
+
+  <script>
+    // Menu hamburger functionality
+    const hamburger = document.getElementById('hamburger');
+    const sideMenu = document.getElementById('sideMenu');
+    const closeMenu = document.getElementById('closeMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    hamburger.addEventListener('click', () => {
+      sideMenu.classList.add('active');
+      menuOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    closeMenu.addEventListener('click', () => {
+      sideMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+
+    menuOverlay.addEventListener('click', () => {
+      sideMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+
+    // Animação suave nos cards
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationDelay = `${Math.random() * 0.5}s`;
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.glass-card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
 </body>
 </html>
