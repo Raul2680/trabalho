@@ -2,96 +2,64 @@
 <html lang="pt-pt">
 <head>
   <meta charset="UTF-8">
-  <title>Receitas Fusion</title>
+  <title>Receitas Premium</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="fusion-header">
-    <div class="fusion-brand">
-      <span class="fusion-logo">🥗</span>
-      <h1>Receitas Fusion</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#destaques">Destaques</a></li>
-        <li><a href="#novidades">Novidades</a></li>
-        <li><a href="#comunidade">Comunidade</a></li>
-      </ul>
+  <header class="main-header">
+    <a href="index.html" class="header-logo" aria-label="Página principal">🍴</a>
+    <h1 class="header-title">Receitas Premium</h1>
+    <form class="header-search" action="#" method="GET">
+      <input type="text" name="q" placeholder="Pesquisar receitas...">
+      <button type="submit">🔎</button>
+    </form>
+    <nav class="header-nav">
+      <a href="#destaques">Destaques</a>
+      <a href="#sobremesas">Sobremesas</a>
+      <a href="#salgados">Salgados</a>
+      <a href="#sobre">Sobre</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Descobre novas receitas de todo o mundo!</h2>
-    <p>Inspira-te, experimenta e partilha sabores que atravessam culturas, sempre com um toque de criatividade colaborativa.</p>
-    <form class="fusion-search" action="#" method="GET">
-      <input type="text" name="q" placeholder="Pesquisar receita, país, ingrediente..." />
-      <button type="submit">🔎</button>
-    </form>
+  <section class="banner">
+    <h2>Sabor, Inovação e Apresentação</h2>
+    <p>Descobre as melhores receitas com fotos inspiradoras e dicas de chefs.<br>Explora, guarda e partilha os teus favoritos!</p>
   </section>
 
   <main>
-    <section id="destaques">
-      <h3>Receitas em Destaque</h3>
-      <div class="fusion-grid">
-        <article class="fusion-card">
-          <div class="fusion-img" style="background:#ffe0e0;">🍫</div>
-          <h4>Brigadeiro</h4>
-          <p>O doce mais famoso do Brasil, simples, fácil e irresistível.</p>
-          <a href="#">Ver Receita</a>
+    <section id="destaques" class="grid-section">
+      <h3>🍽️ Receitas em Destaque</h3>
+      <div class="receita-grid">
+        <article class="card">
+          <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg" alt="Brigadeiro gourmet" />
+          <h4>Brigadeiro Gourmet</h4>
+          <p>O clássico brasileiro com chocolate 70%, macio e tentador.</p>
+          <a href="#">Ver receita</a>
         </article>
-        <article class="fusion-card">
-          <div class="fusion-img" style="background:#ffefda;">🥟</div>
+        <article class="card">
+          <img src="https://images.pexels.com/photos/461382/pexels-photo-461382.jpeg" alt="Coxinha de frango" />
           <h4>Coxinha de Frango</h4>
-          <p>Um clássico salgado crocante, recheio de frango e sabor de festa.</p>
-          <a href="#">Ver Receita</a>
+          <p>Casca dourada, recheio suculento e sabor de festa a cada dentada.</p>
+          <a href="#">Ver receita</a>
         </article>
-        <article class="fusion-card">
-          <div class="fusion-img" style="background:#e2f0d3;">🍲</div>
-          <h4>Feijoada</h4>
-          <p>Tradição, sabor e partilha à mesa em cada prato.</p>
-          <a href="#">Ver Receita</a>
-        </article>
-      </div>
-    </section>
-
-    <section id="novidades">
-      <h3>Novas Sugestões da Comunidade</h3>
-      <div class="fusion-grid">
-        <article class="fusion-card">
-          <div class="fusion-img" style="background:#daf0ff;">🥧</div>
-          <h4>Pastel de Nata</h4>
-          <p>A sobremesa portuguesa adorada no mundo inteiro.</p>
-          <a href="#">Ver Receita</a>
-        </article>
-        <article class="fusion-card">
-          <div class="fusion-img" style="background:#fff5db;">🍝</div>
-          <h4>Lasanha Italiana</h4>
-          <p>Camadas de massa, molho e queijo num clássico reconfortante.</p>
-          <a href="#">Ver Receita</a>
-        </article>
-        <article class="fusion-card">
-          <div class="fusion-img" style="background:#eaeaff;">🍛</div>
-          <h4>Curry de Legumes</h4>
-          <p>Fusion de especiarias do oriente, vegetariano e cheio de cor.</p>
-          <a href="#">Ver Receita</a>
+        <article class="card">
+          <img src="https://images.pexels.com/photos/167965/pexels-photo-167965.jpeg" alt="Feijoada tradicional" />
+          <h4>Feijoada Clássica</h4>
+          <p>Receita robusta e aromática, perfeita para reunir a família e amigos.</p>
+          <a href="#">Ver receita</a>
         </article>
       </div>
     </section>
 
-    <section id="comunidade">
-      <h3>Envia a tua Receita!</h3>
-      <form class="fusion-form">
-        <input type="text" placeholder="Nome da Receita"
-               required>
-        <textarea placeholder="Descreve a tua receita..." required></textarea>
-        <button type="submit">Partilhar Receita</button>
-      </form>
+    <section id="sobre" class="sobre">
+      <h3>Sobre o site</h3>
+      <p>Este portal foi criado para quem aprecia receitas bem explicadas, bonitas e compatíveis com todos os dispositivos. Cada receita tem ingredientes claros, passo a passo, imagens e truques para garantir resultados de chef em casa.</p>
     </section>
   </main>
 
   <footer>
-    <span>© 2025 Receitas Fusion — Sabores criados por pessoas para pessoas</span>
+    <span>&copy; 2025 Receitas Premium · Desenvolvido para apaixonados de gastronomia.</span>
   </footer>
 </body>
 </html>
