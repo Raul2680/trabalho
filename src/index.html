@@ -1,148 +1,101 @@
-<!DOCTYPE html>
-<html lang="pt-pt">
-<head>
-  <meta charset="UTF-8">
-  <title>Receitas Glass</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Background com gradiente para efeito glass -->
-  <div class="background-gradient"></div>
-  
-  <!-- Navbar com efeito glassmorphism -->
-  <nav class="glass-navbar">
-    <div class="navbar-content">
-      <!-- Menu Hamburger à esquerda -->
-      <button class="hamburger-menu" id="hamburger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      
-      <!-- Título central com hiperligação -->
-      <a href="index.html" class="navbar-title">🍽️ Receitas Glass</a>
-      
-      <!-- Menu lateral (inicialmente oculto) -->
-      <div class="side-menu" id="sideMenu">
-        <div class="menu-header">
-          <h3>Menu</h3>
-          <button class="close-menu" id="closeMenu">&times;</button>
-        </div>
-        <ul>
-          <li><a href="#home">Início</a></li>
-          <li><a href="#receitas">Receitas</a></li>
-          <li><a href="#doces">Doces</a></li>
-          <li><a href="#salgados">Salgados</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+/* ---------- RESET & ROOT --------- */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --glass-bg:rgba(255,255,255,0.13);
+  --glass-border:rgba(255,255,255,0.25);
+  --glass-hover:rgba(255,255,255,0.22);
+  --dark-bg:#1d1e2f;
+  --dark-glass:#2b2d42;
+  --brand:#46397a;
+  --brand-light:#ede7fa;
+  --accent:#ffb37e;
+  --text:#252545;
+  --text-light:#f1f1f1;
+  --shadow:0 8px 32px rgba(31,38,135,.37);
+}
 
-  <!-- Overlay para fechar menu -->
-  <div class="menu-overlay" id="menuOverlay"></div>
+/* ---------- BODY & BACKGROUND --------- */
+body{
+  font-family:'Inter','Segoe UI',sans-serif;
+  min-height:100vh;display:flex;flex-direction:column;
+  background:linear-gradient(135deg,#667eea,#764ba2,#f093fb,#f5576c,#4facfe,#00f2fe);
+  background-size:500% 500%;animation:bg 18s ease infinite;
+  color:var(--text);overflow-x:hidden
+}
+@keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
 
-  <!-- Conteúdo principal -->
-  <main>
-    <section class="receitas-section">
-      <h2 class="section-title">Nossas Receitas</h2>
-      
-      <!-- Row de receitas com cards glass -->
-      <div class="receitas-row">
-        <article class="glass-card">
-          <div class="card-image">🍫</div>
-          <h3>Brigadeiro</h3>
-          <p>Doce brasileiro clássico</p>
-          <a href="#" class="glass-button">Ver Receita</a>
-        </article>
-        
-        <article class="glass-card">
-          <div class="card-image">🥟</div>
-          <h3>Coxinha</h3>
-          <p>Salgado crocante tradicional</p>
-          <a href="#" class="glass-button">Ver Receita</a>
-        </article>
-        
-        <article class="glass-card">
-          <div class="card-image">🍲</div>
-          <h3>Feijoada</h3>
-          <p>Prato típico brasileiro</p>
-          <a href="#" class="glass-button">Ver Receita</a>
-        </article>
-        
-        <article class="glass-card">
-          <div class="card-image">🥧</div>
-          <h3>Pastel de Nata</h3>
-          <p>Doce português famoso</p>
-          <a href="#" class="glass-button">Ver Receita</a>
-        </article>
-        
-        <article class="glass-card">
-          <div class="card-image">🍝</div>
-          <h3>Lasanha</h3>
-          <p>Massa italiana cremosa</p>
-          <a href="#" class="glass-button">Ver Receita</a>
-        </article>
-        
-        <article class="glass-card">
-          <div class="card-image">🍛</div>
-          <h3>Curry</h3>
-          <p>Especiarias do oriente</p>
-          <a href="#" class="glass-button">Ver Receita</a>
-        </article>
-      </div>
-    </section>
-  </main>
+.dark-mode{
+  background:var(--dark-bg);color:var(--text-light)
+}
 
-  <!-- Footer com efeito glass -->
-  <footer class="glass-footer">
-    <p>&copy; 2025 Receitas Glass - Design Liquid Glass</p>
-  </footer>
+/* ---------- NAVBAR --------- */
+.navbar{
+  position:fixed;top:0;left:0;right:0;height:70px;z-index:1000;
+  display:flex;align-items:center;justify-content:center;padding:0 1.4rem;
+  background:var(--glass-bg);backdrop-filter:blur(18px);border-bottom:1px solid var(--glass-border);box-shadow:var(--shadow)
+}
+.dark-mode .navbar{background:var(--dark-glass);border-color:rgba(255,255,255,.08)}
 
-  <script>
-    // Menu hamburger functionality
-    const hamburger = document.getElementById('hamburger');
-    const sideMenu = document.getElementById('sideMenu');
-    const closeMenu = document.getElementById('closeMenu');
-    const menuOverlay = document.getElementById('menuOverlay');
+.hamburger{display:flex;flex-direction:column;gap:4px;cursor:pointer;border:none;background:var(--glass-bg);
+  padding:12px;border-radius:12px;backdrop-filter:blur(10px);transition:.3s}
+.hamburger span{width:25px;height:3px;background:#fff;border-radius:2px;transition:.3s}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,6px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-6px)}
+.site-title{position:absolute;left:50%;transform:translateX(-50%);font-size:1.7rem;font-weight:700;
+  color:#fff;text-decoration:none;letter-spacing:1px;text-shadow:0 2px 6px rgba(0,0,0,.3)}
+.site-title:hover{opacity:.85}
 
-    hamburger.addEventListener('click', () => {
-      sideMenu.classList.add('active');
-      menuOverlay.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
+.darkmode-toggle{margin-left:auto;font-size:1.4rem;padding:8px 16px;border-radius:40px;border:none;
+  background:var(--glass-bg);color:#fff;cursor:pointer;backdrop-filter:blur(10px);transition:.3s}
+.darkmode-toggle:hover{background:var(--glass-hover)}
+.dark-mode .darkmode-toggle{background:var(--dark-glass)}
 
-    closeMenu.addEventListener('click', () => {
-      sideMenu.classList.remove('active');
-      menuOverlay.classList.remove('active');
-      document.body.style.overflow = 'auto';
-    });
+/* ---------- SIDEBAR --------- */
+.sidebar{position:fixed;top:0;left:-280px;width:280px;height:100vh;padding:90px 1.8rem 2rem;
+  background:var(--glass-bg);backdrop-filter:blur(18px);border-right:1px solid var(--glass-border);
+  box-shadow:var(--shadow);transition:.4s}
+.sidebar.open{left:0}
+.sidebar ul{list-style:none}
+.sidebar li{margin-bottom:1.4rem}
+.sidebar a{display:block;color:#fff;text-decoration:none;font-size:1.1rem;font-weight:500;padding:.75rem 1rem;
+  border-radius:12px;background:var(--glass-bg);border:1px solid var(--glass-border);backdrop-filter:blur(8px);transition:.3s}
+.sidebar a:hover{background:var(--glass-hover);transform:translateX(8px)}
+.dark-mode .sidebar,.dark-mode .sidebar a{background:var(--dark-glass)}
 
-    menuOverlay.addEventListener('click', () => {
-      sideMenu.classList.remove('active');
-      menuOverlay.classList.remove('active');
-      document.body.style.overflow = 'auto';
-    });
+/* Overlay */
+.sidebar-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.55);
+  backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:.3s;z-index:900}
+.sidebar-overlay.show{opacity:1;visibility:visible}
 
-    // Animação suave nos cards
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
+/* ---------- MAIN --------- */
+main{flex:1;margin-top:90px;padding:2rem;display:flex;justify-content:center}
+.container{max-width:1200px;width:100%}
+.container h2{color:#fff;text-align:center;font-size:2.2rem;font-weight:800;margin-bottom:2.5rem;text-shadow:0 4px 15px rgba(0,0,0,.35)}
+.dark-mode .container h2{color:#fafafa}
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.animationDelay = `${Math.random() * 0.5}s`;
-          entry.target.classList.add('animate-in');
-        }
-      });
-    }, observerOptions);
+/* Grid cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;justify-items:center}
+.card{width:200px;height:150px;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:var(--glass-bg);border:1px solid var(--glass-border);backdrop-filter:blur(18px);color:#fff;text-decoration:none;
+  box-shadow:var(--shadow);position:relative;overflow:hidden;transition:.35s}
+.card:hover{transform:translateY(-10px) scale(1.05);background:var(--glass-hover);border-color:rgba(255,255,255,.35)}
+.card::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);transition:.5s}
+.card:hover::before{left:100%}
 
-    document.querySelectorAll('.glass-card').forEach(card => {
-      observer.observe(card);
-    });
-  </script>
-</body>
-</html>
+.icon{font-size:2.8rem;border-radius:50%;width:60px;height:60px;
+  display:flex;align-items:center;justify-content:center;margin-bottom:.6rem;
+  background:var(--glass-bg);border:1px solid var(--glass-border);backdrop-filter:blur(8px)}
+.title{font-weight:600;font-size:1rem;letter-spacing:.5px;text-shadow:0 2px 6px rgba(0,0,0,.3)}
+
+.dark-mode .card,
+.dark-mode .icon{background:var(--dark-glass);border-color:rgba(255,255,255,.1)}
+
+/* ---------- RESPONSIVE --------- */
+@media(max-width:640px){
+  .navbar{padding:0 .8rem}
+  .site-title{font-size:1.35rem}
+  main{padding:1rem}
+  .grid{gap:1.2rem}
+  .card{width:170px;height
