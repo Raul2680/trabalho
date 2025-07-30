@@ -2,86 +2,198 @@
 <html lang="pt-pt">
 <head>
   <meta charset="UTF-8">
-  <title>Receitas Glass</title>
+  <title>Receitas - As Melhores Receitas Online</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- NAVBAR GLASSMORPHIC -->
-  <header class="navbar">
-    <div class="hamburger" id="hamburger" aria-label="Menu" tabindex="0">
-      <span></span>
-      <span></span>
-      <span></span>
+  <!-- Header com navegação estilo PCDiga -->
+  <header class="main-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">🍽️ ReceitasDiga</a>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Procurar receitas, ingredientes...">
+          <button>🔎</button>
+        </div>
+        <div class="header-info">
+          <span>📖 Mais de 1000 receitas</span>
+          <span>⭐ Avaliações reais</span>
+        </div>
+      </div>
     </div>
-    <a href="index.html" class="site-title">🍽️ Receitas Glass</a>
+    <nav class="main-nav">
+      <div class="container">
+        <ul>
+          <li><a href="#doces">Doces e Sobremesas</a></li>
+          <li><a href="#salgados">Pratos Principais</a></li>
+          <li><a href="#aperitivos">Aperitivos</a></li>
+          <li><a href="#bebidas">Bebidas</a></li>
+          <li><a href="#vegetariano">Vegetariano</a></li>
+          <li><a href="#fitness">Fitness</a></li>
+          <li><a href="#internacional">Internacional</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
-  <!-- MENU LATERAL -->
-  <nav class="sidebar" id="sidebar">
-    <ul>
-      <li><a href="#">Início</a></li>
-      <li><a href="#">Receitas</a></li>
-      <li><a href="#">Doces</a></li>
-      <li><a href="#">Salgados</a></li>
-      <li><a href="#">Sobre</a></li>
-    </ul>
-  </nav>
-  <div class="sidebar-overlay" id="sidebar-overlay"></div>
-
-  <main>
-    <div class="receitas-container">
-      <h2>Receitas de Destaque</h2>
-      <div class="receitas-grid">
-        <a href="#" class="receita-card">
-          <div class="receita-icon">🍫</div>
-          <div class="receita-title">Brigadeiro</div>
-        </a>
-        <a href="#" class="receita-card">
-          <div class="receita-icon">🥟</div>
-          <div class="receita-title">Coxinha de Frango</div>
-        </a>
-        <a href="#" class="receita-card">
-          <div class="receita-icon">🍲</div>
-          <div class="receita-title">Feijoada</div>
-        </a>
-        <a href="#" class="receita-card">
-          <div class="receita-icon">🥧</div>
-          <div class="receita-title">Pastel de Nata</div>
-        </a>
-        <a href="#" class="receita-card">
-          <div class="receita-icon">🍝</div>
-          <div class="receita-title">Lasanha</div>
-        </a>
-        <a href="#" class="receita-card">
-          <div class="receita-icon">🍛</div>
-          <div class="receita-title">Curry de Legumes</div>
-        </a>
+  <!-- Banner promocional estilo "Dias PCDiguianos" -->
+  <section class="promo-banner">
+    <div class="container">
+      <h2>🏆 Receitas do Chef da Semana</h2>
+      <div class="countdown">
+        <span>2 dias restantes</span>
       </div>
+    </div>
+  </section>
+
+  <!-- Grid de receitas principal -->
+  <main class="main-content">
+    <div class="container">
+      
+      <!-- Seção Destaques -->
+      <section class="recipes-section">
+        <h3>🌟 Receitas em Destaque</h3>
+        <div class="recipes-grid">
+          <article class="recipe-card featured">
+            <div class="recipe-image">🍫</div>
+            <div class="recipe-badge">Chef Recomenda</div>
+            <h4><a href="brigadeiro.html">Brigadeiro Gourmet</a></h4>
+            <p>O clássico brasileiro com toque premium. Chocolate 70% e acabamento profissional.</p>
+            <div class="recipe-info">
+              <span class="difficulty">⭐⭐ Fácil</span>
+              <span class="time">⏱️ 30min</span>
+            </div>
+            <div class="recipe-rating">
+              <span>4.8 ⭐ (324 avaliações)</span>
+            </div>
+          </article>
+
+          <article class="recipe-card">
+            <div class="recipe-image">🥟</div>
+            <div class="recipe-badge">Top Vendas 🔥</div>
+            <h4><a href="coxinha.html">Coxinha de Frango</a></h4>
+            <p>Massa crocante, recheio suculento. A receita mais pedida da semana!</p>
+            <div class="recipe-info">
+              <span class="difficulty">⭐⭐⭐ Médio</span>
+              <span class="time">⏱️ 1h 15min</span>
+            </div>
+            <div class="recipe-rating">
+              <span>4.6 ⭐ (189 avaliações)</span>
+            </div>
+          </article>
+
+          <article class="recipe-card">
+            <div class="recipe-image">🍲</div>
+            <h4><a href="feijoada.html">Feijoada Tradicional</a></h4>
+            <p>Receita autêntica, carnes selecionadas. Perfeita para o fim de semana.</p>
+            <div class="recipe-info">
+              <span class="difficulty">⭐⭐⭐⭐ Difícil</span>
+              <span class="time">⏱️ 3h 30min</span>
+            </div>
+            <div class="recipe-rating">
+              <span>4.9 ⭐ (456 avaliações)</span>
+            </div>
+          </article>
+
+          <article class="recipe-card">
+            <div class="recipe-image">🥧</div>
+            <div class="recipe-badge">Novidade</div>
+            <h4><a href="pastel-nata.html">Pastel de Nata</a></h4>
+            <p>Receita portuguesa autêntica. Massa folhada e creme perfeito.</p>
+            <div class="recipe-info">
+              <span class="difficulty">⭐⭐⭐ Médio</span>
+              <span class="time">⏱️ 45min</span>
+            </div>
+            <div class="recipe-rating">
+              <span>4.7 ⭐ (98 avaliações)</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Seção Top Receitas -->
+      <section class="recipes-section">
+        <h3>🔥 Mais Populares</h3>
+        <div class="recipes-grid">
+          <article class="recipe-card">
+            <div class="recipe-image">🍝</div>
+            <h4>Esparguete à Carbonara</h4>
+            <p>Receita italiana clássica, cremosa e saborosa.</p>
+            <div class="recipe-info">
+              <span class="difficulty">⭐⭐ Fácil</span>
+              <span class="time">⏱️ 20min</span>
+            </div>
+            <div class="recipe-rating">
+              <span>4.5 ⭐ (267 avaliações)</span>
+            </div>
+          </article>
+
+          <article class="recipe-card">
+            <div class="recipe-image">🥗</div>
+            <h4>Salada Caesar</h4>
+            <p>Fresca, crocante e com molho caseiro especial.</p>
+            <div class="recipe-info">
+              <span class="difficulty">⭐ Muito Fácil</span>
+              <span class="time">⏱️ 15min</span>
+            </div>
+            <div class="recipe-rating">
+              <span>4.4 ⭐ (156 avaliações)</span>
+            </div>
+          </article>
+
+          <article class="recipe-card">
+            <div class="recipe-image">🍰</div>
+            <h4>Bolo de Chocolate</h4>
+            <p>Fofinho, húmido e com cobertura irresistível.</p>
+            <div class="recipe-info">
+              <span class="difficulty">⭐⭐⭐ Médio</span>
+              <span class="time">⏱️ 1h 30min</span>
+            </div>
+            <div class="recipe-rating">
+              <span>4.8 ⭐ (412 avaliações)</span>
+            </div>
+          </article>
+        </div>
+      </section>
     </div>
   </main>
 
-  <footer>
-    <div class="footer-content">
-      <span>&copy; 2025 Receitas Glass — Todos os direitos reservados</span>
+  <!-- Footer estilo PCDiga -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-services">
+        <div class="service">
+          <h4>📱 APP GRATUITA</h4>
+          <p>Todas as receitas sempre à mão</p>
+        </div>
+        <div class="service">
+          <h4>👨‍🍳 CHEFS ESPECIALISTAS</h4>
+          <p>Receitas testadas por profissionais</p>
+        </div>
+        <div class="service">
+          <h4>📝 LISTAS DE COMPRAS</h4>
+          <p>Ingredientes organizados automaticamente</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ReceitasDiga - As melhores receitas estão aqui</p>
+      </div>
     </div>
   </footer>
 
   <script>
-    // Menu hamburger funcional
-    const hamburger = document.getElementById('hamburger');
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('sidebar-overlay');
-    hamburger.onclick = function () {
-      this.classList.toggle('active');
-      sidebar.classList.toggle('open');
-      overlay.classList.toggle('show');
-    };
-    overlay.onclick = function () {
-      sidebar.classList.remove('open');
-      overlay.classList.remove('show');
-      hamburger.classList.remove('active');
-    };
+    // Simulação de interatividade básica
+    document.querySelectorAll('.recipe-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+      });
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+      });
+    });
   </script>
 </body>
 </html>
