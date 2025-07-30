@@ -1,205 +1,298 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Coxinha de Frango - ReceitasDiga</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Mesmo header -->
+  <header class="main-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">🍽️ ReceitasDiga</a>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Procurar receitas, ingredientes...">
+          <button>🔎</button>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <div class="container">
+        <ul>
+          <li><a href="#doces">Doces e Sobremesas</a></li>
+          <li><a href="#salgados">Pratos Principais</a></li>
+          <li><a href="#aperitivos">Aperitivos</a></li>
+          <li><a href="#bebidas">Bebidas</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-body {
-  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-  /* Fundo preto sólido */
-  background: #181818;
-  color: #ff9800;
-  min-height: 100vh;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-}
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Início</a> > <a href="#salgados">Salgados</a> > <span>Coxinha de Frango</span>
+    </div>
+  </div>
 
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0; right: 0;
-  height: 70px;
-  background: rgba(0,0,0,0.98);
-  border-bottom: 1.5px solid #ff9800;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0 2rem;
-  z-index: 1000;
-  box-shadow: 0 8px 32px rgba(255,152,0,0.07);
-}
+  <!-- Página do produto/receita -->
+  <main class="recipe-page">
+    <div class="container">
+      <div class="recipe-layout">
+        
+        <!-- Coluna esquerda - Imagem e galeria -->
+        <div class="recipe-gallery">
+          <div class="main-image">🥟</div>
+          <div class="image-thumbnails">
+            <div class="thumb active">🥟</div>
+            <div class="thumb">📸</div>
+            <div class="thumb">🍽️</div>
+          </div>
+        </div>
 
-.hamburger {
-  background: rgba(255,152,0,0.10);
-  border: 1px solid #ff9800;
-  border-radius: 12px;
-  padding: 10px;
-  cursor: pointer;
-  transition: all 0.3s;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.hamburger span { width: 25px; height: 3px; background: #ff9800; border-radius: 2px; transition: all 0.3s;}
-.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px);}
-.hamburger.active span:nth-child(2) { opacity: 0;}
-.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px);}
+        <!-- Coluna direita - Informações da receita -->
+        <div class="recipe-details">
+          <h1>Coxinha de Frango Tradicional</h1>
+          <div class="recipe-rating-large">
+            <span class="stars">⭐⭐⭐⭐⭐ 4.6</span>
+            <span class="reviews">(189 avaliações)</span>
+            <a href="#reviews" class="write-review">Escrever avaliação</a>
+          </div>
 
-.site-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #ff9800;
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-decoration: none;
-  letter-spacing: 1px;
-  text-shadow: 0 2px 7px #000a;
-}
+          <div class="recipe-badges">
+            <span class="badge popular">Top Vendas 🔥</span>
+            <span class="badge chef">Chef Aprovado</span>
+          </div>
 
-/* Menu lateral */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -300px;
-  width: 300px;
-  height: 100vh;
-  background: #232323ea;
-  border-right: 2px solid #ff9800;
-  transition: left 0.4s;
-  z-index: 1001;
-  padding: 100px 2rem 2rem;
-  box-shadow: 6px 0 22px #ff980015;
-}
-.sidebar.open { left: 0; }
-.sidebar ul { list-style: none; }
-.sidebar li { margin-bottom: 1.1rem; }
-.sidebar a {
-  color: #ff9800;
-  text-decoration: none;
-  font-size: 1.12rem;
-  font-weight: 500;
-  padding: 12px 16px;
-  border-radius: 9px;
-  background: #24201c;
-  border: 1px solid #ff9800;
-  display: block;
-  transition: background .19s, color .12s;
-}
-.sidebar a:hover {
-  background: #ff9800;
-  color: #161616;
-  border-color: #ff9800;
-}
+          <!-- Informações rápidas estilo especificações técnicas -->
+          <div class="recipe-specs">
+            <div class="spec-row">
+              <span class="label">Dificuldade:</span>
+              <span class="value">⭐⭐⭐ Médio</span>
+            </div>
+            <div class="spec-row">
+              <span class="label">Tempo Prep:</span>
+              <span class="value">45 minutos</span>
+            </div>
+            <div class="spec-row">
+              <span class="label">Tempo Cozimento:</span>
+              <span class="value">30 minutos</span>
+            </div>
+            <div class="spec-row">
+              <span class="label">Porções:</span>
+              <span class="value">20 unidades</span>
+            </div>
+            <div class="spec-row">
+              <span class="label">Categoria:</span>
+              <span class="value">Salgados, Fritos</span>
+            </div>
+            <div class="spec-row">
+              <span class="label">Calorias:</span>
+              <span class="value">~85 kcal/unidade</span>
+            </div>
+          </div>
 
-.sidebar-overlay {
-  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-  background: rgba(0,0,0,0.65); opacity: 0; visibility: hidden;
-  transition: .3s; z-index: 900;
-}
-.sidebar-overlay.show { opacity: 1; visibility: visible; }
+          <!-- Botões de ação estilo compra -->
+          <div class="recipe-actions">
+            <button class="btn-primary">📖 Ver Receita Completa</button>
+            <button class="btn-secondary">📱 Guardar nos Favoritos</button>
+            <button class="btn-secondary">🛒 Lista de Compras</button>
+          </div>
 
-/* Main content */
-main {
-  flex: 1;
-  margin-top: 100px;
-  padding: 2.5rem 1rem 2rem 1rem;
-  display: flex;
-  justify-content: center;
-  background: transparent;
-}
-.receitas-container {
-  max-width: 1200px;
-  width: 100%;
-}
-.receitas-container h2 {
-  color: #ff9800;
-  font-size: 2.2rem;
-  text-align: center;
-  font-weight: 900;
-  margin-bottom: 2.7rem;
-  letter-spacing: 2px;
-  text-shadow: 0 2px 10px #000c;
-}
-/* Grid de cards */
-.receitas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 2rem;
-  justify-items: center;
-}
-.receita-card {
-  width: 200px; height: 150px;
-  background: rgba(255,152,0,0.12);
-  border: 2px solid #ff980088;
-  border-radius: 18px;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  text-decoration: none;
-  color: #ff9800;
-  font-weight: 600;
-  box-shadow: 0 8px 40px #ff980032;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.32s cubic-bezier(.55,0,.5,1.1);
-}
-.receita-card:hover {
-  background: #ff9800;
-  color: #15100e;
-  border-color: #ff9800;
-  box-shadow: 0 15px 45px #ff98004a,0 2px 12px #0004;
-  transform: translateY(-8px) scale(1.04);
-}
-.receita-icon {
-  font-size: 2.4rem;
-  margin-bottom: 0.55rem;
-  background: #181818;
-  border-radius: 50%;
-  width: 56px; height: 56px;
-  display: flex; align-items: center; justify-content: center;
-  border: 2px solid #ff9800;
-}
-.receita-title {
-  font-size: 1.01rem;
-  font-weight: 700;
-  text-align: center;
-  letter-spacing: .5px;
-}
+          <!-- Serviços -->
+          <div class="recipe-services">
+            <div class="service-item">
+              <span class="icon">✅</span>
+              <span>Receita testada e aprovada</span>
+            </div>
+            <div class="service-item">
+              <span class="icon">🎥</span>
+              <span>Vídeo passo a passo disponível</span>
+            </div>
+            <div class="service-item">
+              <span class="icon">📱</span>
+              <span>Sincroniza com a app móvel</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
-footer {
-  width: 100%;
-  background: #181818;
-  color: #ff9800;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 500;
-  border-top: 2.5px solid #ff9800;
-  padding: 1.3rem 0.7rem 1.1rem 0.7rem;
-  margin: 0;
-  position: fixed;
-  left: 0; right: 0; bottom: 0;
-  z-index: 2000;
-  box-shadow: 0 -2px 18px #ff980022;
-}
+      <!-- Separadores estilo produto -->
+      <div class="recipe-tabs">
+        <div class="tab-nav">
+          <button class="tab-btn active" data-tab="ingredientes">Ingredientes</button>
+          <button class="tab-btn" data-tab="preparo">Modo de Preparo</button>
+          <button class="tab-btn" data-tab="dicas">Dicas do Chef</button>
+          <button class="tab-btn" data-tab="avaliacoes">Avaliações</button>
+        </div>
 
-/* Ajuste espaço para main não tapar o footer fixo */
-@media (min-width: 0px) {
-  main { margin-bottom: 90px; }
-}
-/* Responsivo */
-@media (max-width: 900px) {
-  main { padding: 1.4rem 0.5rem 2rem 0.5rem; }
-  .receitas-container h2 { font-size: 1.47rem;}
-}
-@media (max-width: 768px) {
-  .navbar { padding: 0 1rem; }
-  .site-title { font-size: 1.1rem; }
-  .sidebar { width: 210px; left: -210px;}
-  .receitas-grid { gap: 1rem; }
-}
-@media (max-width: 480px) {
-  .receitas-grid { grid-template-columns: 1fr 1fr; gap: 0.7rem;}
-  .receita-card { width: 110px; height: 70px;}
-  .receita-icon { font-size: 1.5rem; width: 27px; height: 27px; }
-}
+        <div class="tab-content">
+          <div class="tab-panel active" id="ingredientes">
+            <h3>Ingredientes</h3>
+            <div class="ingredients-sections">
+              <div class="ingredient-section">
+                <h4>Para a Massa:</h4>
+                <ul>
+                  <li>500ml de água</li>
+                  <li>3 colheres de sopa de óleo</li>
+                  <li>1 colher de chá de sal</li>
+                  <li>500g de farinha de trigo</li>
+                </ul>
+              </div>
+              <div class="ingredient-section">
+                <h4>Para o Recheio:</h4>
+                <ul>
+                  <li>2 peitos de frango cozidos e desfiados</li>
+                  <li>1 cebola média picada</li>
+                  <li>2 dentes de alho picados</li>
+                  <li>2 colheres de sopa de azeite</li>
+                  <li>Sal, pimenta e cheiros-verdes a gosto</li>
+                </ul>
+              </div>
+              <div class="ingredient-section">
+                <h4>Para Empanar:</h4>
+                <ul>
+                  <li>2 ovos batidos</li>
+                  <li>Farinha para polvilhar</li>
+                  <li>Óleo para fritar</li>
+                </ul>
+              </div>
+            </div>
+            <button class="btn-primary">🛒 Adicionar à Lista de Compras</button>
+          </div>
+
+          <div class="tab-panel" id="preparo">
+            <h3>Modo de Preparo</h3>
+            <div class="preparation-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Preparar o Recheio</h4>
+                  <p>Refogue a cebola e o alho no azeite. Adicione o frango desfiado, tempere com sal, pimenta e cheiros-verdes. Reserve.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Fazer a Massa</h4>
+                  <p>Ferva a água com óleo e sal. Adicione a farinha de uma vez, mexendo vigorosamente até formar uma massa lisa que solte do fundo da panela.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Modelar as Coxinhas</h4>
+                  <p>Com a massa morna, faça pequenas porções, abra na palma da mão, coloque o recheio e modele no formato de coxinha.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Empanar e Fritar</h4>
+                  <p>Passe as coxinhas na farinha, depois no ovo batido. Frite em óleo bem quente até dourar. Escorra em papel absorvente.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="dicas">
+            <h3>Dicas do Chef</h3>
+            <div class="chef-tips">
+              <div class="tip">
+                <h4>💡 Massa Perfeita</h4>
+                <p>A massa deve estar bem cozida e lisa. Se ficou grudenta, cozinhe um pouco mais mexendo sempre.</p>
+              </div>
+              <div class="tip">
+                <h4>💡 Recheio Saboroso</h4>
+                <p>Tempere bem o frango e deixe esfriar completamente antes de rechear para não derreter a massa.</p>
+              </div>
+              <div class="tip">
+                <h4>💡 Fritura Ideal</h4>
+                <p>O óleo deve estar bem quente (180°C). Teste com um pedacinho de massa - deve dourar rapidamente.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="avaliacoes">
+            <h3>Avaliações dos Utilizadores</h3>
+            <div class="reviews-summary">
+              <div class="rating-overview">
+                <span class="big-rating">4.6 ⭐</span>
+                <span>Baseado em 189 avaliações</span>
+              </div>
+            </div>
+            <div class="individual-reviews">
+              <div class="review">
+                <div class="review-header">
+                  <span class="reviewer">Maria Santos</span>
+                  <span class="rating">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p>"Ficaram perfeitas! A massa ficou lisinha e o recheio muito saboroso. Toda a família adorou!"</p>
+              </div>
+              <div class="review">
+                <div class="review-header">
+                  <span class="reviewer">João Silva</span>
+                  <span class="rating">⭐⭐⭐⭐</span>
+                </div>
+                <p>"Boa receita, mas precisei ajustar o sal. No geral muito boa!"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Receitas relacionadas -->
+      <section class="related-recipes">
+        <h3>Receitas Relacionadas</h3>
+        <div class="recipes-grid">
+          <article class="recipe-card">
+            <div class="recipe-image">🍞</div>
+            <h4>Pão de Açúcar</h4>
+            <div class="recipe-info">
+              <span class="difficulty">⭐⭐ Fácil</span>
+              <span class="time">⏱️ 40min</span>
+            </div>
+          </article>
+          <article class="recipe-card">
+            <div class="recipe-image">🥖</div>
+            <h4>Pastéis de Bacalhau</h4>
+            <div class="recipe-info">
+              <span class="difficulty">⭐⭐⭐ Médio</span>
+              <span class="time">⏱️ 1h</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2025 ReceitasDiga - As melhores receitas estão aqui</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Funcionalidade das tabs
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const tabId = this.dataset.tab;
+        
+        // Remove active de todos os botões e painéis
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        
+        // Adiciona active ao botão clicado e painel correspondente
+        this.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
