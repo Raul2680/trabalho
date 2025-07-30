@@ -644,4 +644,34 @@ body {
   .tab-content {
     padding: 1rem;
   }
+  .recipe-gallery {
+  max-width: 480px;
+  margin-bottom: 2rem;
+}
+.main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.14);
+  margin-bottom: 1rem;
+  display: block;
+}
+.image-thumbnails {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.thumb {
+  width: 90px;
+  height: 70px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.thumb.active,
+.thumb:hover {
+  border-color: #e74c3c; /* ou #ff9800 para tema laranja */
+}
 }
