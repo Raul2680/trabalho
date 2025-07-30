@@ -1,298 +1,647 @@
-<!DOCTYPE html>
-<html lang="pt-pt">
-<head>
-  <meta charset="UTF-8">
-  <title>Coxinha de Frango - ReceitasDiga</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Mesmo header -->
-  <header class="main-header">
-    <div class="header-top">
-      <div class="container">
-        <div class="logo">
-          <a href="index.html">🍽️ ReceitasDiga</a>
-        </div>
-        <div class="search-bar">
-          <input type="text" placeholder="Procurar receitas, ingredientes...">
-          <button>🔎</button>
-        </div>
-      </div>
-    </div>
-    <nav class="main-nav">
-      <div class="container">
-        <ul>
-          <li><a href="#doces">Doces e Sobremesas</a></li>
-          <li><a href="#salgados">Pratos Principais</a></li>
-          <li><a href="#aperitivos">Aperitivos</a></li>
-          <li><a href="#bebidas">Bebidas</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- Breadcrumb -->
-  <div class="breadcrumb">
-    <div class="container">
-      <a href="index.html">Início</a> > <a href="#salgados">Salgados</a> > <span>Coxinha de Frango</span>
-    </div>
-  </div>
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
 
-  <!-- Página do produto/receita -->
-  <main class="recipe-page">
-    <div class="container">
-      <div class="recipe-layout">
-        
-        <!-- Coluna esquerda - Imagem e galeria -->
-        <div class="recipe-gallery">
-          <div class="main-image">🥟</div>
-          <div class="image-thumbnails">
-            <div class="thumb active">🥟</div>
-            <div class="thumb">📸</div>
-            <div class="thumb">🍽️</div>
-          </div>
-        </div>
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 
-        <!-- Coluna direita - Informações da receita -->
-        <div class="recipe-details">
-          <h1>Coxinha de Frango Tradicional</h1>
-          <div class="recipe-rating-large">
-            <span class="stars">⭐⭐⭐⭐⭐ 4.6</span>
-            <span class="reviews">(189 avaliações)</span>
-            <a href="#reviews" class="write-review">Escrever avaliação</a>
-          </div>
+/* HEADER */
+.main-header {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-          <div class="recipe-badges">
-            <span class="badge popular">Top Vendas 🔥</span>
-            <span class="badge chef">Chef Aprovado</span>
-          </div>
+.header-top {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
 
-          <!-- Informações rápidas estilo especificações técnicas -->
-          <div class="recipe-specs">
-            <div class="spec-row">
-              <span class="label">Dificuldade:</span>
-              <span class="value">⭐⭐⭐ Médio</span>
-            </div>
-            <div class="spec-row">
-              <span class="label">Tempo Prep:</span>
-              <span class="value">45 minutos</span>
-            </div>
-            <div class="spec-row">
-              <span class="label">Tempo Cozimento:</span>
-              <span class="value">30 minutos</span>
-            </div>
-            <div class="spec-row">
-              <span class="label">Porções:</span>
-              <span class="value">20 unidades</span>
-            </div>
-            <div class="spec-row">
-              <span class="label">Categoria:</span>
-              <span class="value">Salgados, Fritos</span>
-            </div>
-            <div class="spec-row">
-              <span class="label">Calorias:</span>
-              <span class="value">~85 kcal/unidade</span>
-            </div>
-          </div>
+.header-top .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
 
-          <!-- Botões de ação estilo compra -->
-          <div class="recipe-actions">
-            <button class="btn-primary">📖 Ver Receita Completa</button>
-            <button class="btn-secondary">📱 Guardar nos Favoritos</button>
-            <button class="btn-secondary">🛒 Lista de Compras</button>
-          </div>
+.logo a {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #e74c3c;
+  text-decoration: none;
+}
 
-          <!-- Serviços -->
-          <div class="recipe-services">
-            <div class="service-item">
-              <span class="icon">✅</span>
-              <span>Receita testada e aprovada</span>
-            </div>
-            <div class="service-item">
-              <span class="icon">🎥</span>
-              <span>Vídeo passo a passo disponível</span>
-            </div>
-            <div class="service-item">
-              <span class="icon">📱</span>
-              <span>Sincroniza com a app móvel</span>
-            </div>
-          </div>
-        </div>
-      </div>
+.search-bar {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  background: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+}
 
-      <!-- Separadores estilo produto -->
-      <div class="recipe-tabs">
-        <div class="tab-nav">
-          <button class="tab-btn active" data-tab="ingredientes">Ingredientes</button>
-          <button class="tab-btn" data-tab="preparo">Modo de Preparo</button>
-          <button class="tab-btn" data-tab="dicas">Dicas do Chef</button>
-          <button class="tab-btn" data-tab="avaliacoes">Avaliações</button>
-        </div>
+.search-bar input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+}
 
-        <div class="tab-content">
-          <div class="tab-panel active" id="ingredientes">
-            <h3>Ingredientes</h3>
-            <div class="ingredients-sections">
-              <div class="ingredient-section">
-                <h4>Para a Massa:</h4>
-                <ul>
-                  <li>500ml de água</li>
-                  <li>3 colheres de sopa de óleo</li>
-                  <li>1 colher de chá de sal</li>
-                  <li>500g de farinha de trigo</li>
-                </ul>
-              </div>
-              <div class="ingredient-section">
-                <h4>Para o Recheio:</h4>
-                <ul>
-                  <li>2 peitos de frango cozidos e desfiados</li>
-                  <li>1 cebola média picada</li>
-                  <li>2 dentes de alho picados</li>
-                  <li>2 colheres de sopa de azeite</li>
-                  <li>Sal, pimenta e cheiros-verdes a gosto</li>
-                </ul>
-              </div>
-              <div class="ingredient-section">
-                <h4>Para Empanar:</h4>
-                <ul>
-                  <li>2 ovos batidos</li>
-                  <li>Farinha para polvilhar</li>
-                  <li>Óleo para fritar</li>
-                </ul>
-              </div>
-            </div>
-            <button class="btn-primary">🛒 Adicionar à Lista de Compras</button>
-          </div>
+.search-bar button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
 
-          <div class="tab-panel" id="preparo">
-            <h3>Modo de Preparo</h3>
-            <div class="preparation-steps">
-              <div class="step">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                  <h4>Preparar o Recheio</h4>
-                  <p>Refogue a cebola e o alho no azeite. Adicione o frango desfiado, tempere com sal, pimenta e cheiros-verdes. Reserve.</p>
-                </div>
-              </div>
-              <div class="step">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                  <h4>Fazer a Massa</h4>
-                  <p>Ferva a água com óleo e sal. Adicione a farinha de uma vez, mexendo vigorosamente até formar uma massa lisa que solte do fundo da panela.</p>
-                </div>
-              </div>
-              <div class="step">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                  <h4>Modelar as Coxinhas</h4>
-                  <p>Com a massa morna, faça pequenas porções, abra na palma da mão, coloque o recheio e modele no formato de coxinha.</p>
-                </div>
-              </div>
-              <div class="step">
-                <div class="step-number">4</div>
-                <div class="step-content">
-                  <h4>Empanar e Fritar</h4>
-                  <p>Passe as coxinhas na farinha, depois no ovo batido. Frite em óleo bem quente até dourar. Escorra em papel absorvente.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+.header-info {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
 
-          <div class="tab-panel" id="dicas">
-            <h3>Dicas do Chef</h3>
-            <div class="chef-tips">
-              <div class="tip">
-                <h4>💡 Massa Perfeita</h4>
-                <p>A massa deve estar bem cozida e lisa. Se ficou grudenta, cozinhe um pouco mais mexendo sempre.</p>
-              </div>
-              <div class="tip">
-                <h4>💡 Recheio Saboroso</h4>
-                <p>Tempere bem o frango e deixe esfriar completamente antes de rechear para não derreter a massa.</p>
-              </div>
-              <div class="tip">
-                <h4>💡 Fritura Ideal</h4>
-                <p>O óleo deve estar bem quente (180°C). Teste com um pedacinho de massa - deve dourar rapidamente.</p>
-              </div>
-            </div>
-          </div>
+.main-nav {
+  background: #2c3e50;
+}
 
-          <div class="tab-panel" id="avaliacoes">
-            <h3>Avaliações dos Utilizadores</h3>
-            <div class="reviews-summary">
-              <div class="rating-overview">
-                <span class="big-rating">4.6 ⭐</span>
-                <span>Baseado em 189 avaliações</span>
-              </div>
-            </div>
-            <div class="individual-reviews">
-              <div class="review">
-                <div class="review-header">
-                  <span class="reviewer">Maria Santos</span>
-                  <span class="rating">⭐⭐⭐⭐⭐</span>
-                </div>
-                <p>"Ficaram perfeitas! A massa ficou lisinha e o recheio muito saboroso. Toda a família adorou!"</p>
-              </div>
-              <div class="review">
-                <div class="review-header">
-                  <span class="reviewer">João Silva</span>
-                  <span class="rating">⭐⭐⭐⭐</span>
-                </div>
-                <p>"Boa receita, mas precisei ajustar o sal. No geral muito boa!"</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+}
 
-      <!-- Receitas relacionadas -->
-      <section class="related-recipes">
-        <h3>Receitas Relacionadas</h3>
-        <div class="recipes-grid">
-          <article class="recipe-card">
-            <div class="recipe-image">🍞</div>
-            <h4>Pão de Açúcar</h4>
-            <div class="recipe-info">
-              <span class="difficulty">⭐⭐ Fácil</span>
-              <span class="time">⏱️ 40min</span>
-            </div>
-          </article>
-          <article class="recipe-card">
-            <div class="recipe-image">🥖</div>
-            <h4>Pastéis de Bacalhau</h4>
-            <div class="recipe-info">
-              <span class="difficulty">⭐⭐⭐ Médio</span>
-              <span class="time">⏱️ 1h</span>
-            </div>
-          </article>
-        </div>
-      </section>
-    </div>
-  </main>
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
 
-  <footer class="main-footer">
-    <div class="container">
-      <div class="footer-bottom">
-        <p>&copy; 2025 ReceitasDiga - As melhores receitas estão aqui</p>
-      </div>
-    </div>
-  </footer>
+.main-nav a:hover {
+  background: #34495e;
+}
 
-  <script>
-    // Funcionalidade das tabs
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-      btn.addEventListener('click', function() {
-        const tabId = this.dataset.tab;
-        
-        // Remove active de todos os botões e painéis
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-        
-        // Adiciona active ao botão clicado e painel correspondente
-        this.classList.add('active');
-        document.getElementById(tabId).classList.add('active');
-      });
-    });
-  </script>
-</body>
-</html>
+/* BANNER PROMOCIONAL */
+.promo-banner {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.promo-banner h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.countdown {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* CONTENT PRINCIPAL */
+.main-content {
+  padding: 3rem 0;
+}
+
+.recipes-section {
+  margin-bottom: 3rem;
+}
+
+.recipes-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  border-bottom: 3px solid #e74c3c;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* CARDS DE RECEITA */
+.recipe-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.recipe-image {
+  background: #f8f9fa;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  border-bottom: 1px solid #eee;
+}
+
+.recipe-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #e74c3c;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 10;
+}
+
+.recipe-card.featured .recipe-badge {
+  background: #f39c12;
+}
+
+.recipe-card h4 {
+  padding: 1rem 1rem 0.5rem;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.recipe-card h4 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.recipe-card p {
+  padding: 0 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.recipe-info {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+  margin-top: 1rem;
+}
+
+.recipe-rating {
+  padding: 0 1rem 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* PÁGINA INDIVIDUAL DA RECEITA */
+.breadcrumb {
+  background: #f8f9fa;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.breadcrumb a {
+  color: #e74c3c;
+  text-decoration: none;
+}
+
+.recipe-page {
+  padding: 2rem 0;
+}
+
+.recipe-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.recipe-gallery {
+  text-align: center;
+}
+
+.main-image {
+  background: #f8f9fa;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.image-thumbnails {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.thumb {
+  width: 80px;
+  height: 80px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.thumb.active {
+  border-color: #e74c3c;
+}
+
+.recipe-details h1 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.recipe-rating-large {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.recipe-badges {
+  margin-bottom: 1.5rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.badge.popular {
+  background: #e74c3c;
+  color: white;
+}
+
+.badge.chef {
+  background: #f39c12;
+  color: white;
+}
+
+/* ESPECIFICAÇÕES */
+.recipe-specs {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.spec-row:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.value {
+  color: #666;
+}
+
+/* BOTÕES */
+.recipe-actions {
+  margin-bottom: 2rem;
+}
+
+.btn-primary, .btn-secondary {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary {
+  background: #e74c3c;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #c0392b;
+}
+
+.btn-secondary {
+  background: #ecf0f1;
+  color: #2c3e50;
+}
+
+.btn-secondary:hover {
+  background: #d5dbdb;
+}
+
+/* SERVIÇOS */
+.recipe-services {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* TABS */
+.recipe-tabs {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin-bottom: 3rem;
+}
+
+.tab-nav {
+  display: flex;
+  border-bottom: 1px solid #eee;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #666;
+  transition: all 0.3s;
+}
+
+.tab-btn.active {
+  color: #e74c3c;
+  border-bottom: 3px solid #e74c3c;
+}
+
+.tab-content {
+  padding: 2rem;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/* INGREDIENTES */
+.ingredients-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.ingredient-section {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.ingredient-section h4 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.ingredient-section ul {
+  list-style: none;
+}
+
+.ingredient-section li {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* PASSOS */
+.preparation-steps {
+  max-width: 800px;
+}
+
+.step {
+  display: flex;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.step:last-child {
+  border-bottom: none;
+}
+
+.step-number {
+  background: #e74c3c;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.step-content h4 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+/* DICAS */
+.chef-tips {
+  max-width: 800px;
+}
+
+.tip {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #f39c12;
+}
+
+.tip h4 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+/* AVALIAÇÕES */
+.reviews-summary {
+  text-align: center;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.big-rating {
+  font-size: 3rem;
+  color: #f39c12;
+  margin-right: 1rem;
+}
+
+.individual-reviews {
+  max-width: 800px;
+}
+
+.review {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.reviewer {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* RECEITAS RELACIONADAS */
+.related-recipes {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.related-recipes h3 {
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+/* FOOTER */
+.main-footer {
+  background: #2c3e50;
+  color: white;
+  padding: 3rem 0 1rem;
+  margin-top: 4rem;
+}
+
+.footer-services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.service {
+  text-align: center;
+  padding: 1rem;
+}
+
+.service h4 {
+  margin-bottom: 0.5rem;
+  color: #ecf0f1;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #34495e;
+  color: #bdc3c7;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .header-top .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .search-bar {
+    max-width: 100%;
+  }
+  
+  .main-nav ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .recipe-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .recipes-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tab-nav {
+    flex-wrap: wrap;
+  }
+  
+  .ingredients-sections {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-image {
+    height: 250px;
+    font-size: 4rem;
+  }
+  
+  .recipe-details h1 {
+    font-size: 1.8rem;
+  }
+  
+  .tab-content {
+    padding: 1rem;
+  }
+}
