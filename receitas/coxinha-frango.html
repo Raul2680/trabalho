@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/trabalho/src/style.css">
 </head>
 <body>
-  <!-- Header igual ao teu template -->
+  <!-- Header -->
   <header class="main-header">
     <div class="header-top">
       <div class="container">
@@ -52,13 +52,12 @@
           </div>
         </div>
 
-        <!-- Informações da receita -->
         <div class="recipe-details">
           <h1>Coxinha de Frango Tradicional</h1>
           <div class="recipe-rating-large">
             <span class="stars">⭐⭐⭐⭐⭐ 4.6</span>
             <span class="reviews">(189 avaliações)</span>
-            <a href="#reviews" class="write-review">Escrever avaliação</a>
+            <a href="#avaliacoes" class="write-review">Escrever avaliação</a>
           </div>
           <div class="recipe-badges">
             <span class="badge popular">Top Vendas 🔥</span>
@@ -85,10 +84,131 @@
         </div>
       </div>
 
-      <!-- Tabs, ingredientes, preparo, dicas e avaliações (idéntico ao teu, só omiti por brevidade) -->
-      <!-- ... Mantém o teu bloco de tabs e conteúdo normalmente ... -->
+      <!-- RECEITA EM TABS -->
+      <div class="recipe-tabs">
+        <div class="tab-nav">
+          <button class="tab-btn active" data-tab="ingredientes">Ingredientes</button>
+          <button class="tab-btn" data-tab="preparo">Modo de Preparo</button>
+          <button class="tab-btn" data-tab="dicas">Dicas do Chef</button>
+          <button class="tab-btn" data-tab="avaliacoes">Avaliações</button>
+        </div>
+        <div class="tab-content">
+          <!-- Ingredientes -->
+          <div class="tab-panel active" id="ingredientes">
+            <h3>Ingredientes</h3>
+            <div class="ingredients-sections">
+              <div class="ingredient-section">
+                <h4>Para a Massa:</h4>
+                <ul>
+                  <li>500ml de água</li>
+                  <li>3 colheres de sopa de óleo</li>
+                  <li>1 colher de chá de sal</li>
+                  <li>500g de farinha de trigo</li>
+                </ul>
+              </div>
+              <div class="ingredient-section">
+                <h4>Para o Recheio:</h4>
+                <ul>
+                  <li>2 peitos de frango cozidos e desfiados</li>
+                  <li>1 cebola média picada</li>
+                  <li>2 dentes de alho picados</li>
+                  <li>2 colheres de sopa de azeite</li>
+                  <li>Sal, pimenta e cheiros-verdes a gosto</li>
+                </ul>
+              </div>
+              <div class="ingredient-section">
+                <h4>Para Empanar:</h4>
+                <ul>
+                  <li>2 ovos batidos</li>
+                  <li>Farinha para polvilhar</li>
+                  <li>Óleo para fritar</li>
+                </ul>
+              </div>
+            </div>
+            <button class="btn-primary">🛒 Adicionar à Lista de Compras</button>
+          </div>
+          <!-- Preparo -->
+          <div class="tab-panel" id="preparo">
+            <h3>Modo de Preparo</h3>
+            <div class="preparation-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Preparar o Recheio</h4>
+                  <p>Refogue a cebola e o alho no azeite até ficarem dourados. Junte o frango desfiado, tempere com sal, pimenta e cheiros-verdes. Reserve.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Fazer a Massa</h4>
+                  <p>Leve ao lume a água com o óleo e o sal. Quando levantar fervura, adicione de uma só vez a farinha. Mexa sem parar até formar uma massa lisa que despegue do fundo da panela.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Modelar as Coxinhas</h4>
+                  <p>Com a massa morna, faça porções, abra na palma da mão, recheie com frango e feche em formato de coxinha.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Empanar e Fritar</h4>
+                  <p>Passe as coxinhas na farinha, depois no ovo batido, e frite em óleo quente até dourar. Escorra em papel absorvente.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Dicas do Chef -->
+          <div class="tab-panel" id="dicas">
+            <h3>Dicas do Chef</h3>
+            <div class="chef-tips">
+              <div class="tip">
+                <h4>💡 Massa Perfeita</h4>
+                <p>A massa deve estar cozida e elástica. Se ficou demasiado pegajosa, volte ao lume mexendo sempre.</p>
+              </div>
+              <div class="tip">
+                <h4>💡 Recheio saboroso</h4>
+                <p>Deixe o frango arrefecer completamente antes de rechear, para a massa não se desfazer.</p>
+              </div>
+              <div class="tip">
+                <h4>💡 Fritura</h4>
+                <p>O óleo deve estar bem quente (cerca de 180°C). Frite poucas de cada vez, para não arrefecer o óleo e garantir crocância.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Avaliações -->
+          <div class="tab-panel" id="avaliacoes">
+            <h3>Avaliações dos Utilizadores</h3>
+            <div class="reviews-summary">
+              <div class="rating-overview">
+                <span class="big-rating">4.6 ⭐</span>
+                <span>Baseado em 189 avaliações</span>
+              </div>
+            </div>
+            <div class="individual-reviews">
+              <div class="review">
+                <div class="review-header">
+                  <span class="reviewer">Maria Santos</span>
+                  <span class="rating">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p>"Coxinhas fantásticas, ficaram sequinhas e recheio bem temperado!"</p>
+              </div>
+              <div class="review">
+                <div class="review-header">
+                  <span class="reviewer">João Silva</span>
+                  <span class="rating">⭐⭐⭐⭐</span>
+                </div>
+                <p>"Muito boa. Só precisei colocar mais pimenta. Recomendo!"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <!-- Receitas relacionadas, footer... -->
+      <!-- receitas relacionadas ... -->
       <section class="related-recipes">
         <h3>Receitas Relacionadas</h3>
         <div class="recipes-grid">
@@ -116,7 +236,7 @@
   </footer>
 
   <script>
-    // Tabs (mantém teu código)
+    // Tabs funcionalidade
     document.querySelectorAll('.tab-btn').forEach(btn => {
       btn.addEventListener('click', function() {
         const tabId = this.dataset.tab;
@@ -126,8 +246,7 @@
         document.getElementById(tabId).classList.add('active');
       });
     });
-
-    // Troca de foto principal na galeria de imagens
+    // Galeria
     const mainImage = document.getElementById('main-image');
     const thumbs = document.querySelectorAll('.thumb');
     thumbs.forEach(thumb => {
