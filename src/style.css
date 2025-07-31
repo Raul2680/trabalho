@@ -245,15 +245,17 @@ body {
   text-align: center;
 }
 
-.main-image {
-  background: #f8f9fa;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 8rem;
+..main-image {
+  width: 100%;
+  max-width: 430px;   /* ou o valor exacto da tua primeira main-image */
+  height: 310px;      /* ou a altura da tua primeira imagem principal */
+  aspect-ratio: 430/310; /* ou ajusta à proporção real */
+  object-fit: cover;      /* Corta o excesso sem distorcer */
   border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.14);
   margin-bottom: 1rem;
+  display: block;
+  background: #fff;   /* evita bordas transparentes se a img for menor */
 }
 
 .image-thumbnails {
@@ -631,10 +633,11 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .main-image {
-    height: 250px;
-    font-size: 4rem;
+    max-width: 98vw;
+    height: 155px;
+    aspect-ratio: unset;
   }
   
   .recipe-details h1 {
