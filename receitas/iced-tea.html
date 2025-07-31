@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>Iced Tea de Limão - Receita</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/trabalho/src/style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="logo">
+          <a href="/trabalho/src/index.html">🍽️ Receita</a>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Procurar receitas, ingredientes..." />
+          <button>🔎</button>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <div class="container">
+        <ul>
+          <li><a href="/trabalho/src/doces.html">Doces e Sobremesas</a></li>
+          <li><a href="/trabalho/src/salgados.html">Pratos Principais</a></li>
+          <li><a href="/trabalho/src/aperitivos.html">Aperitivos</a></li>
+          <li><a href="/trabalho/src/bebidas.html" class="active">Bebidas</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="/trabalho/src/index.html">Início</a> &gt;
+      <a href="/trabalho/src/bebidas.html">Bebidas</a> &gt;
+      <span>Iced Tea de Limão</span>
+    </div>
+  </div>
+
+  <main class="recipe-page">
+    <div class="container">
+      <div class="recipe-layout">
+        <!-- Galeria -->
+        <div class="recipe-gallery">
+          <img src="/trabalho/img/iced-tea1.jpg" alt="Iced Tea de Limão" class="main-image" id="main-image"/>
+          <div class="image-thumbnails">
+            <img src="/trabalho/img/iced-tea1_thumb.jpg" alt="Miniatura 1" class="thumb active" data-large="/trabalho/img/iced-tea1.jpg"/>
+            <img src="/trabalho/img/iced-tea2_thumb.jpg" alt="Miniatura 2" class="thumb" data-large="/trabalho/img/iced-tea2.jpg"/>
+            <img src="/trabalho/img/iced-tea3_thumb.jpg" alt="Miniatura 3" class="thumb" data-large="/trabalho/img/iced-tea3.jpg"/>
+          </div>
+        </div>
+        <!-- Detalhes -->
+        <div class="recipe-details">
+          <h1>Iced Tea de Limão Caseiro</h1>
+          <div class="recipe-rating-large">
+            <span class="stars">⭐⭐⭐⭐ 4.5</span>
+            <span class="reviews">(55 avaliações)</span>
+            <a href="#avaliacoes" class="write-review">Escrever avaliação</a>
+          </div>
+          <div class="recipe-badges">
+            <span class="badge popular">Refrescante</span>
+            <span class="badge chef">Caseiro</span>
+          </div>
+          <div class="recipe-specs">
+            <div class="spec-row"><span class="label">Dificuldade:</span> <span class="value">⭐ Fácil</span></div>
+            <div class="spec-row"><span class="label">Tempo de Preparo:</span> <span class="value">15 minutos</span></div>
+            <div class="spec-row"><span class="label">Porções:</span> <span class="value">4 copos</span></div>
+            <div class="spec-row"><span class="label">Categoria:</span> <span class="value">Bebidas, Refrescante</span></div>
+            <div class="spec-row"><span class="label">Calorias:</span> <span class="value">~50 kcal (por copo)</span></div>
+          </div>
+          <div class="recipe-actions">
+            <button class="btn-primary">📖 Ver Receita Completa</button>
+            <button class="btn-secondary">📱 Guardar nos Favoritos</button>
+            <button class="btn-secondary">🛒 Lista de Compras</button>
+          </div>
+          <div class="recipe-services">
+            <div class="service-item"><span class="icon">✅</span> Fácil e rápido de fazer</div>
+            <div class="service-item"><span class="icon">🍋</span> Sabor natural de limão</div>
+            <div class="service-item"><span class="icon">🧊</span> Perfeito para dias quentes</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-tabs">
+        <div class="tab-nav">
+          <button class="tab-btn active" data-tab="ingredientes">Ingredientes</button>
+          <button class="tab-btn" data-tab="preparo">Modo de Preparo</button>
+          <button class="tab-btn" data-tab="dicas">Dicas do Chef</button>
+          <button class="tab-btn" data-tab="avaliacoes">Avaliações</button>
+        </div>
+        <div class="tab-content">
+          <div class="tab-panel active" id="ingredientes">
+            <h3>Ingredientes</h3>
+            <div class="ingredients-sections">
+              <div class="ingredient-section">
+                <ul>
+                  <li>4 saquetas de chá preto</li>
+                  <li>1 litro de água</li>
+                  <li>Sumo de 2 limões</li>
+                  <li>Rodelas de limão para servir</li>
+                  <li>3 colheres de sopa de açúcar (ou a gosto)</li>
+                  <li>Gelo a gosto</li>
+                  <li>Hortelã (opcional)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Preparo -->
+          <div class="tab-panel" id="preparo">
+            <h3>Modo de Preparo</h3>
+            <div class="preparation-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <p>Ferva 1 litro de água. Junte as saquetas de chá preto e deixe em infusão por 3-5 minutos.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <p>Retire as saquetas, misture o açúcar até dissolver e deixe arrefecer.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <p>Junte o sumo de limão, mexa bem e leve ao frigorífico para ficar bem fresco.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <p>Sirva em copos com gelo, rodelas de limão e folha de hortelã se desejar.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-panel" id="dicas">
+            <h3>Dicas do Chef</h3>
+            <div class="chef-tips">
+              <div class="tip">
+                <h4>💡 Açúcar na medida certa</h4>
+                <p>Pode ajustar o doce ao seu gosto ou usar adoçante natural.</p>
+              </div>
+              <div class="tip">
+                <h4>💡 Versão aromatizada</h4>
+                <p>Acrescente rodelas de laranja, lima ou ramos de ervas aromáticas (hortelã, manjericão) à jarra antes de servir.</p>
+              </div>
+              <div class="tip">
+                <h4>💡 Chá mais intenso</h4>
+                <p>Deixe o chá mais tempo em infusão se gostar de sabor mais forte.</p>
+              </div>
+            </div>
+          </div>
+          <div class="tab-panel" id="avaliacoes">
+            <h3>Avaliações dos Utilizadores</h3>
+            <div class="reviews-summary">
+              <div class="rating-overview">
+                <span class="big-rating">4.5 ⭐</span>
+                <span>Baseado em 55 avaliações</span>
+              </div>
+            </div>
+            <div class="individual-reviews">
+              <div class="review">
+                <div class="review-header">
+                  <span class="reviewer">Vera Monteiro</span>
+                  <span class="rating">⭐⭐⭐⭐</span>
+                </div>
+                <p>"Ficou muito bom com menos açúcar. Refrescante!"</p>
+              </div>
+              <div class="review">
+                <div class="review-header">
+                  <span class="reviewer">Carlos Guedes</span>
+                  <span class="rating">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p>"Perfeito nos dias de calor! Uso chá verde às vezes."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="related-recipes">
+        <h3>Receitas Relacionadas</h3>
+        <div class="recipes-grid">
+          <article class="recipe-card">
+            <div class="recipe-image">
+              <img src="/trabalho/img/smoothie-morango1.jpg" alt="Smoothie de Morango" style="width:100%;height:150px;object-fit:cover;border-radius:8px;">
+            </div>
+            <h4><a href="/trabalho/receitas/smoothie-morango.html">Smoothie de Morango</a></h4>
+            <div class="recipe-info">
+              <span class="difficulty">⭐ Muito Fácil</span>
+              <span class="time">⏱️ 10min</span>
+            </div>
+          </article>
+          <article class="recipe-card">
+            <div class="recipe-image">
+              <img src="/trabalho/img/caipirinha.jpg" alt="Caipirinha Clássica" style="width:100%;height:150px;object-fit:cover;border-radius:8px;">
+            </div>
+            <h4><a href="/trabalho/receitas/caipirinha.html">Caipirinha Clássica</a></h4>
+            <div class="recipe-info">
+              <span class="difficulty">⭐ Muito Fácil</span>
+              <span class="time">⏱️ 10min</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2025 Receita - As melhores receitas estão aqui</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Tabs
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const tabId = this.dataset.tab;
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        this.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+    // Galeria
+    const mainImage = document.getElementById('main-image');
+    const thumbs = document.querySelectorAll('.thumb');
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', function() {
+        const bigSrc = this.getAttribute('data-large');
+        mainImage.src = bigSrc;
+        thumbs.forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
