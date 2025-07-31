@@ -2,92 +2,235 @@
 <html lang="pt-pt">
 <head>
   <meta charset="UTF-8">
-  <title>Brigadeiro | Receitas Colaborativas</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Brigadeiro Gourmet - Receita</title>
+  <meta name="viewport" content="width=dev ice-width,initial-scale=1">
   <link rel="stylesheet" href="/trabalho/src/style.css">
 </head>
 <body>
-  <!-- NAVBAR PROFISSIONAL -->
-  <header class="navbar">
-    <div class="navbar-content">
-      <a href="/trabalho/src/index.html" class="nav-logo" aria-label="Página Principal">🍽️</a>
-      <span class="nav-title">Receitas Colaborativas</span>
-      <form class="nav-search" action="/pesquisa.html" method="GET">
-        <input type="text" name="q" placeholder="Procure receita, ingrediente...">
-        <button type="submit" aria-label="Pesquisar">🔎</button>
-      </form>
-      <nav class="nav-menu">
-        <button class="menu-btn" aria-haspopup="true" aria-expanded="false">Comidas ▾</button>
-        <ul class="menu-dropdown">
-          <li><a href="/trabalho/receitas/brigadeiro.html">Brigadeiro</a></li>
-          <li><a href="/trabalho/receitas/coxinha-frango.html">Coxinha de Frango</a></li>
-          <li><a href="/trabalho/receitas/feijoada.html">Feijoada</a></li>
-          <li><a href="/trabalho/receitas/francesinha.html">Francesinha</a></li>
-          <li><a href="/trabalho/receitas/arroz-de-pato.html">Arroz de Pato</a></li>
-          <li><a href="/trabalho/receitas/pastel-de-nata.html">Pastel de Nata</a></li>
-          <li><a href="/trabalho/receitas/amêijoas-à-bulhão-pato.html">Amêijoas à Bulhão Pato</a></li>
-          <li><a href="/trabalho/receitas/carne-de-porco-à-alentejana.html">Carne de Porco à Alentejana</a></li>
-        </ul>
-      </nav>
-            <!-- Botão de modo escuro completamente à direita -->
-      <button class="darkmode-toggle" id="toggle-darkmode" title="Alternar modo escuro" aria-label="Modo escuro">Modo Escuro 🌙</button>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="logo">
+          <a href="/trabalho/src/index.html">🍽️ Receita</a>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Procurar receitas, ingredientes...">
+          <button>🔎</button>
+        </div>
+      </div>
     </div>
+    <nav class="main-nav">
+      <div class="container">
+        <ul>
+          <li><a href="/trabalho/src/doces.html">Doces e Sobremesas</a></li>
+          <li><a href="/trabalho/src/salgados.html">Pratos Principais</a></li>
+          <li><a href="/trabalho/src/aperitivos.html">Aperitivos</a></li>
+          <li><a href="/trabalho/src/bebidas.html">Bebidas</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
-  <main>
-    <article class="card-receita-prof" style="margin:4rem auto 2.5rem;max-width:440px;">
-      <span class="emoji">🍫</span>
-      <h1 style="font-size:2.1rem;margin-bottom:2px;">Brigadeiro</h1>
-      <p style="color:#8d60bb;margin-bottom:14px;">O clássico brasileiro. Doce, rápido e irresistível.</p>
-      <h3>Ingredientes</h3>
-      <ul>
-        <li>1 lata de leite condensado</li>
-        <li>1 colher de sopa de manteiga</li>
-        <li>7 colheres de sopa de chocolate em pó</li>
-        <li>Granulado para enrolar</li>
-      </ul>
-      <h3>Preparação</h3>
-      <ol>
-        <li>Numa panela, misture o leite condensado, a manteiga e o chocolate em pó.</li>
-        <li>Cozinhe em fogo médio, mexendo sempre, até começar a soltar do fundo da panela (ponto de brigadeiro).</li>
-        <li>Deixe arrefecer.</li>
-        <li>Enrole em pequenas bolinhas e passe no granulado.</li>
-        <li>Sirva e aproveite!</li>
-      </ol>
-    </article>
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="/trabalho/src/index.html">Início</a> > <a href="/trabalho/src/doces.html">Doces</a> > <span>Brigadeiro Gourmet</span>
+    </div>
+  </div>
+
+  <main class="recipe-page">
+    <div class="container">
+      <div class="recipe-layout">
+        <!-- Galeria de imagens locais -->
+        <div class="recipe-gallery">
+          <img src="/trabalho/img/brigadeiro1.jpg" alt="Brigadeiro Gourmet" class="main-image" id="main-image" />
+          <div class="image-thumbnails">
+            <img src="/trabalho/img/brigadeiro1_thumb.jpg" alt="Miniatura 1" class="thumb active" data-large="/trabalho/img/brigadeiro1.jpg" />
+            <img src="/trabalho/img/brigadeiro2_thumb.jpg" alt="Miniatura 2" class="thumb" data-large="/trabalho/img/brigadeiro2.jpg" />
+            <img src="/trabalho/img/brigadeiro3_thumb.jpg" alt="Miniatura 3" class="thumb" data-large="/trabalho/img/brigadeiro3.jpg" />
+          </div>
+        </div>
+
+        <div class="recipe-details">
+          <h1>Brigadeiro Gourmet</h1>
+          <div class="recipe-rating-large">
+            <span class="stars">⭐⭐⭐⭐⭐ 4.9</span>
+            <span class="reviews">(312 avaliações)</span>
+            <a href="#avaliacoes" class="write-review">Escrever avaliação</a>
+          </div>
+          <div class="recipe-badges">
+            <span class="badge popular">Muito Popular 🍬</span>
+            <span class="badge chef">Chef Aprovado</span>
+          </div>
+          <div class="recipe-specs">
+            <div class="spec-row"><span class="label">Dificuldade:</span> <span class="value">⭐⭐ Fácil</span></div>
+            <div class="spec-row"><span class="label">Tempo Prep:</span> <span class="value">10 minutos</span></div>
+            <div class="spec-row"><span class="label">Tempo Cozimento:</span> <span class="value">20 minutos</span></div>
+            <div class="spec-row"><span class="label">Porções:</span> <span class="value">15 a 20 unidades</span></div>
+            <div class="spec-row"><span class="label">Categoria:</span> <span class="value">Doces, Sobremesa</span></div>
+            <div class="spec-row"><span class="label">Calorias:</span> <span class="value">~100 kcal/unidade</span></div>
+          </div>
+          <div class="recipe-actions">
+            <button class="btn-primary">📖 Ver Receita Completa</button>
+            <button class="btn-secondary">📱 Guardar nos Favoritos</button>
+            <button class="btn-secondary">🛒 Lista de Compras</button>
+          </div>
+          <div class="recipe-services">
+            <div class="service-item"><span class="icon">✅</span> Receita testada e aprovada</div>
+            <div class="service-item"><span class="icon">🎥</span> Vídeo passo a passo disponível</div>
+            <div class="service-item"><span class="icon">📱</span> Sincroniza com a app móvel</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RECEITA EM TABS -->
+      <div class="recipe-tabs">
+        <div class="tab-nav">
+          <button class="tab-btn active" data-tab="ingredientes">Ingredientes</button>
+          <button class="tab-btn" data-tab="preparo">Modo de Preparo</button>
+          <button class="tab-btn" data-tab="dicas">Dicas do Chef</button>
+          <button class="tab-btn" data-tab="avaliacoes">Avaliações</button>
+        </div>
+        <div class="tab-content">
+          <!-- Ingredientes -->
+          <div class="tab-panel active" id="ingredientes">
+            <h3>Ingredientes</h3>
+            <ul>
+              <li>1 lata de leite condensado</li>
+              <li>100 g de chocolate meio amargo (nobre, picado)</li>
+              <li>1 colher de sopa de manteiga sem sal</li>
+              <li>1 colher de sopa de cacau em pó (opcional, para intensificar o sabor)</li>
+              <li>Chocolate granulado belga ou raspas para finalizar</li>
+            </ul>
+            <button class="btn-primary">🛒 Adicionar à Lista de Compras</button>
+          </div>
+
+          <!-- Preparo -->
+          <div class="tab-panel" id="preparo">
+            <h3>Modo de Preparo</h3>
+            <div class="preparation-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Derreter e misturar</h4>
+                  <p>Num tacho de fundo grosso, derreta a manteiga e adicione o leite condensado, o chocolate picado e o cacau em pó.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Cozinhar</h4>
+                  <p>Cozinhe em lume médio-baixo, mexendo sem parar, até a mistura engrossar e soltar do fundo do tacho (ponto de brigadeiro).</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Arrefecer e enrolar</h4>
+                  <p>Deixe arrefecer completamente. Com as mãos untadas, forme bolinhas e passe no granulado ou raspas de chocolate.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dicas do Chef -->
+          <div class="tab-panel" id="dicas">
+            <h3>Dicas do Chef</h3>
+            <div class="chef-tips">
+              <div class="tip">
+                <h4>🍫 Use chocolate de qualidade</h4>
+                <p>O chocolate nobre dá um sabor muito mais intenso e uma textura cremosa.</p>
+              </div>
+              <div class="tip">
+                <h4>🧈 Manteiga sem sal</h4>
+                <p>Dá equilíbrio ao sabor doce. Evite margarina.</p>
+              </div>
+              <div class="tip">
+                <h4>❄️ Arrefecimento</h4>
+                <p>Coloque a massa num prato untado e leve ao frigorífico por 30 minutos antes de enrolar.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Avaliações -->
+          <div class="tab-panel" id="avaliacoes">
+            <h3>Avaliações dos Utilizadores</h3>
+            <div class="reviews-summary">
+              <div class="rating-overview">
+                <span class="big-rating">4.9 ⭐</span>
+                <span>Baseado em 312 avaliações</span>
+              </div>
+            </div>
+            <div class="individual-reviews">
+              <div class="review">
+                <div class="review-header">
+                  <span class="reviewer">Ana Oliveira</span>
+                  <span class="rating">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p>"Delicioso! O melhor brigadeiro que já fiz. Macio, intenso e nada enjoativo."</p>
+              </div>
+              <div class="review">
+                <div class="review-header">
+                  <span class="reviewer">Carlos Mendes</span>
+                  <span class="rating">⭐⭐⭐⭐</span>
+                </div>
+                <p>"Muito bom, mas recomendo usar granulado de qualidade. Faz diferença!"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- receitas relacionadas ... -->
+      <section class="related-recipes">
+        <h3>Receitas Relacionadas</h3>
+        <div class="recipes-grid">
+          <article class="recipe-card">
+            <div class="recipe-image">🍪</div>
+            <h4>Cookies de Chocolate</h4>
+            <div class="recipe-info"><span class="difficulty">⭐⭐ Fácil</span><span class="time">⏱️ 25min</span></div>
+          </article>
+          <article class="recipe-card">
+            <div class="recipe-image">🍮</div>
+            <h4>Pudim de Leite</h4>
+            <div class="recipe-info"><span class="difficulty">⭐⭐⭐ Médio</span><span class="time">⏱️ 1h</span></div>
+          </article>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <footer>
-    Projeto colaborativo no GitHub · <span id="ano"></span>
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2025 Receita - As melhores receitas estão aqui</p>
+      </div>
+    </div>
   </footer>
-<script>
-  document.getElementById('ano').textContent = new Date().getFullYear();
 
-  // Dropdown Menu
-  document.querySelector('.menu-btn').onclick = function () {
-    document.querySelector('.menu-dropdown').classList.toggle('show');
-    this.setAttribute('aria-expanded', document.querySelector('.menu-dropdown').classList.contains('show'));
-  };
-  document.body.addEventListener('click', function(e){
-    if (!e.target.closest('.nav-menu')) {
-      document.querySelector('.menu-dropdown').classList.remove('show');
-      document.querySelector('.menu-btn').setAttribute('aria-expanded','false');
-    }
-  });
-
-  // Botão DARK MODE
-  document.getElementById('toggle-darkmode').addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-    this.textContent = document.body.classList.contains('dark-mode') ? "☀️" : "🌙";
-    // Guarda a preferência do utilizador
-    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-  });
-
-  // Aplica o modo escuro automaticamente se for a escolha guardada
-  if(localStorage.getItem('darkMode') === 'dark') {
-    document.body.classList.add('dark-mode');
-    document.getElementById('toggle-darkmode').textContent = "☀️";
-  }
-</script>
+  <script>
+    // Tabs funcionalidade
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', function () {
+        const tabId = this.dataset.tab;
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        this.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+    // Galeria
+    const mainImage = document.getElementById('main-image');
+    const thumbs = document.querySelectorAll('.thumb');
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', function () {
+        const bigSrc = this.getAttribute('data-large');
+        mainImage.src = bigSrc;
+        thumbs.forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>

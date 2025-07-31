@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Lasanha Italiana - Receita</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/trabalho/src/style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="logo">
+          <a href="/trabalho/src/index.html">🍽️ Receita</a>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Procurar receitas, ingredientes...">
+          <button>🔎</button>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <div class="container">
+        <ul>
+          <li><a href="/trabalho/src/doces.html">Doces e Sobremesas</a></li>
+          <li><a href="/trabalho/src/salgados.html" class="active">Pratos Principais</a></li>
+          <li><a href="/trabalho/src/aperitivos.html">Aperitivos</a></li>
+          <li><a href="/trabalho/src/bebidas.html">Bebidas</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="/trabalho/src/index.html">Início</a> > <a href="salgados.html">Pratos Principais</a> > <span>Lasanha Italiana</span>
+    </div>
+  </div>
+
+  <main class="recipe-page">
+    <div class="container">
+      <div class="recipe-layout">
+        <!-- Galeria de imagens locais -->
+        <div class="recipe-gallery">
+          <img src="/trabalho/img/lasanha1.jpg" alt="Lasanha Italiana" class="main-image" id="main-image" />
+          <div class="image-thumbnails">
+            <img src="/trabalho/img/lasanha1_thumb.jpg" alt="Miniatura 1" class="thumb active" data-large="/trabalho/img/lasanha1.jpg" />
+            <img src="/trabalho/img/lasanha2_thumb.jpg" alt="Miniatura 2" class="thumb" data-large="/trabalho/img/lasanha2.jpg" />
+            <img src="/trabalho/img/lasanha3_thumb.jpg" alt="Miniatura 3" class="thumb" data-large="/trabalho/img/lasanha3.jpg" />
+          </div>
+        </div>
+
+        <div class="recipe-details">
+          <h1>Lasanha de Carne à Italiana</h1>
+          <div class="recipe-rating-large">
+            <span class="stars">⭐⭐⭐⭐⭐ 4.8</span>
+            <span class="reviews">(245 avaliações)</span>
+            <a href="#avaliacoes" class="write-review">Escrever avaliação</a>
+          </div>
+          <div class="recipe-badges">
+            <span class="badge popular">Clássico Italiano</span>
+            <span class="badge chef">Chef Aprovado</span>
+          </div>
+          <div class="recipe-specs">
+            <div class="spec-row"><span class="label">Dificuldade:</span> <span class="value">⭐⭐⭐ Médio</span></div>
+            <div class="spec-row"><span class="label">Tempo Prep:</span> <span class="value">45 minutos</span></div>
+            <div class="spec-row"><span class="label">Tempo Forno:</span> <span class="value">40 minutos</span></div>
+            <div class="spec-row"><span class="label">Porções:</span> <span class="value">8</span></div>
+            <div class="spec-row"><span class="label">Categoria:</span> <span class="value">Prato Principal, Massas</span></div>
+            <div class="spec-row"><span class="label">Calorias:</span> <span class="value">~350 kcal/fatia</span></div>
+          </div>
+          <div class="recipe-actions">
+            <button class="btn-primary">📖 Ver Receita Completa</button>
+            <button class="btn-secondary">📱 Guardar nos Favoritos</button>
+            <button class="btn-secondary">🛒 Lista de Compras</button>
+          </div>
+          <div class="recipe-services">
+            <div class="service-item"><span class="icon">✅</span> Receita testada e aprovada</div>
+            <div class="service-item"><span class="icon">🎥</span> Vídeo passo a passo disponível</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipe-tabs">
+        <div class="tab-nav">
+          <button class="tab-btn active" data-tab="ingredientes">Ingredientes</button>
+          <button class="tab-btn" data-tab="preparo">Modo de Preparo</button>
+          <button class="tab-btn" data-tab="dicas">Dicas do Chef</button>
+          <button class="tab-btn" data-tab="avaliacoes">Avaliações</button>
+        </div>
+        <div class="tab-content">
+          <!-- Ingredientes -->
+          <div class="tab-panel active" id="ingredientes">
+            <h3>Ingredientes</h3>
+            <div class="ingredients-sections">
+              <div class="ingredient-section">
+                <h4>Molho Bolonhesa:</h4>
+                <ul>
+                  <li>500g de carne picada (vaca ou mista)</li>
+                  <li>1 cebola média picada</li>
+                  <li>2 dentes de alho picados</li>
+                  <li>400g de tomate pelado</li>
+                  <li>2 colheres de sopa de azeite</li>
+                  <li>Sal, pimenta e orégãos a gosto</li>
+                </ul>
+              </div>
+              <div class="ingredient-section">
+                <h4>Molho Bechamel:</h4>
+                <ul>
+                  <li>600ml de leite</li>
+                  <li>2 colheres de sopa de manteiga</li>
+                  <li>2 colheres de sopa de farinha</li>
+                  <li>Sal, pimenta e noz-moscada a gosto</li>
+                </ul>
+              </div>
+              <div class="ingredient-section">
+                <h4>Montagem:</h4>
+                <ul>
+                  <li>400g de massa de lasanha (pré-cozida)</li>
+                  <li>200g de queijo mozarela ralado</li>
+                  <li>100g de queijo parmesão ralado</li>
+                </ul>
+              </div>
+            </div>
+            <button class="btn-primary">🛒 Adicionar à Lista de Compras</button>
+          </div>
+          <!-- Preparo -->
+          <div class="tab-panel" id="preparo">
+            <h3>Modo de Preparo</h3>
+            <div class="preparation-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Molho Bolonhesa</h4>
+                  <p>Refoga a cebola e o alho no azeite. Junta a carne e deixa cozinhar até ganhar cor. Junta o tomate pelado picado, tempera com sal, pimenta e orégãos. Deixa cozinhar 25 minutos em lume brando.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Molho Bechamel</h4>
+                  <p>Derrete a manteiga, junta a farinha e mexe bem. Vai adicionando o leite aos poucos, mexendo sempre, até engrossar. Tempera com sal, pimenta e noz-moscada.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Montar a Lasanha</h4>
+                  <p>Num tabuleiro, coloca uma camada de carne, uma de placas de massa de lasanha, depois molho bechamel e queijo. Repete as camadas até terminar (termina com bechamel e queijo no topo).</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Levar ao Forno</h4>
+                  <p>Leva a forno pré-aquecido a 200ºC cerca de 40 minutos, até dourar. Deixa repousar alguns minutos antes de servir.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Dicas do Chef -->
+          <div class="tab-panel" id="dicas">
+            <h3>Dicas do Chef</h3>
+            <div class="chef-tips">
+              <div class="tip">
+                <h4>💡 Molho mais encorpado</h4>
+                <p>Para um bolonhesa mais rico, podes adicionar cenoura ralada e vinho tinto durante a cozedura.</p>
+              </div>
+              <div class="tip">
+                <h4>💡 Lasanha suculenta</h4>
+                <p>Não poupes no molho – isso evita que a massa fique seca após o forno.</p>
+              </div>
+              <div class="tip">
+                <h4>💡 Finalização</h4>
+                <p>Deixa repousar fora do forno 10 minutos para cortar fatias perfeitas.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Avaliações -->
+          <div class="tab-panel" id="avaliacoes">
+            <h3>Avaliações dos Utilizadores</h3>
+            <div class="reviews-summary">
+              <div class="rating-overview">
+                <span class="big-rating">4.8 ⭐</span>
+                <span>Baseado em 245 avaliações</span>
+              </div>
+            </div>
+            <div class="individual-reviews">
+              <div class="review">
+                <div class="review-header">
+                  <span class="reviewer">Carla Menezes</span>
+                  <span class="rating">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p>"A lasanha fica mesmo cremosa! Receita muito bem explicada."</p>
+              </div>
+              <div class="review">
+                <div class="review-header">
+                  <span class="reviewer">Rui Martins</span>
+                  <span class="rating">⭐⭐⭐⭐</span>
+                </div>
+                <p>"Fácil de seguir e resultado igual ao restaurante. Recomendo!"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="related-recipes">
+        <h3>Receitas Relacionadas</h3>
+        <div class="recipes-grid">
+          <article class="recipe-card">
+            <div class="recipe-image">
+              <img src="/trabalho/img/feijoada1.jpg" alt="Feijoada" style="width:100%;height:150px;object-fit:cover;border-radius:8px;">
+            </div>
+            <h4><a href="/trabalho/src/feijoada.html">Feijoada Tradicional</a></h4>
+            <div class="recipe-info">
+              <span class="difficulty">⭐⭐⭐</span>
+              <span class="time">⏱️ 3h</span>
+            </div>
+          </article>
+          <article class="recipe-card">
+            <div class="recipe-image">
+              <img src="/trabalho/img/coxinha1.jpg" alt="Coxinha de Frango" style="width:100%;height:150px;object-fit:cover;border-radius:8px;">
+            </div>
+            <h4><a href="/trabalho/src/coxinha.html">Coxinha de Frango</a></h4>
+            <div class="recipe-info">
+              <span class="difficulty">⭐⭐⭐</span>
+              <span class="time">⏱️ 1h 20min</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2025 Receita - As melhores receitas estão aqui</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Tabs funcionalidade
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const tabId = this.dataset.tab;
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        this.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+
+    // Galeria
+    const mainImage = document.getElementById('main-image');
+    const thumbs = document.querySelectorAll('.thumb');
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', function() {
+        const bigSrc = this.getAttribute('data-large');
+        mainImage.src = bigSrc;
+        thumbs.forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

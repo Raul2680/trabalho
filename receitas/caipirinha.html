@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>Caipirinha Clássica - Receita</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/trabalho/src/style.css" />
+</head>
+<body>
+  <!-- Header igual ao do site -->
+  <header class="main-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="logo">
+          <a href="/trabalho/src/index.html">🍽️ Receita</a>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Procurar receitas, ingredientes..." />
+          <button>🔎</button>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <div class="container">
+        <ul>
+          <li><a href="/trabalho/src/doces.html">Doces e Sobremesas</a></li>
+          <li><a href="/trabalho/src/salgados.html">Pratos Principais</a></li>
+          <li><a href="/trabalho/src/aperitivos.html">Aperitivos</a></li>
+          <li><a href="/trabalho/src/bebidas.html" class="active">Bebidas</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="/trabalho/src/index.html">Início</a> &gt;
+      <a href="/trabalho/src/bebidas.html">Bebidas</a> &gt;
+      <span>Caipirinha Clássica</span>
+    </div>
+  </div>
+
+  <!-- Conteúdo principal da receita -->
+  <main class="recipe-page">
+    <div class="container">
+      <div class="recipe-layout">
+        <!-- Galeria de imagens locais -->
+        <div class="recipe-gallery">
+          <img
+            src="/trabalho/img/caipirinha1.jpg"
+            alt="Caipirinha Clássica"
+            class="main-image"
+            id="main-image"
+          />
+          <div class="image-thumbnails">
+            <img
+              src="/trabalho/img/caipirinha1_thumb.jpg"
+              alt="Miniatura 1"
+              class="thumb active"
+              data-large="/trabalho/img/caipirinha1.jpg"
+            />
+            <img
+              src="/trabalho/img/caipirinha2_thumb.jpg"
+              alt="Miniatura 2"
+              class="thumb"
+              data-large="/trabalho/img/caipirinha2.jpg"
+            />
+            <img
+              src="/trabalho/img/caipirinha3_thumb.jpg"
+              alt="Miniatura 3"
+              class="thumb"
+              data-large="/trabalho/img/caipirinha3.jpg"
+            />
+          </div>
+        </div>
+
+        <!-- Detalhes da receita -->
+        <div class="recipe-details">
+          <h1>Caipirinha Clássica</h1>
+          <div class="recipe-rating-large">
+            <span class="stars">⭐⭐⭐ 4.7</span>
+            <span class="reviews">(123 avaliações)</span>
+            <a href="#avaliacoes" class="write-review">Escrever avaliação</a>
+          </div>
+
+          <div class="recipe-badges">
+            <span class="badge popular">Muito Fácil</span>
+            <span class="badge chef">Bebida Tradicional</span>
+          </div>
+
+          <div class="recipe-specs">
+            <div class="spec-row">
+              <span class="label">Dificuldade:</span>
+              <span class="value">⭐ Muito Fácil</span>
+            </div>
+            <div class="spec-row">
+              <span class="label">Tempo de Preparo:</span>
+              <span class="value">10 minutos</span>
+            </div>
+            <div class="spec-row">
+              <span class="label">Porções:</span>
+              <span class="value">1 copo</span>
+            </div>
+            <div class="spec-row">
+              <span class="label">Categoria:</span>
+              <span class="value">Bebidas, Tradicional</span>
+            </div>
+            <div class="spec-row">
+              <span class="label">Calorias:</span>
+              <span class="value">~150 kcal</span>
+            </div>
+          </div>
+
+          <div class="recipe-actions">
+            <button class="btn-primary">📖 Ver Receita Completa</button>
+            <button class="btn-secondary">📱 Guardar nos Favoritos</button>
+            <button class="btn-secondary">🛒 Lista de Compras</button>
+          </div>
+
+          <div class="recipe-services">
+            <div class="service-item">
+              <span class="icon">✅</span>
+              <span>Receita fácil e rápida</span>
+            </div>
+            <div class="service-item">
+              <span class="icon">🍋</span>
+              <span>Limão fresco essencial</span>
+            </div>
+            <div class="service-item">
+              <span class="icon">🍹</span>
+              <span>Perfeita para qualquer ocasião</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="recipe-tabs">
+        <div class="tab-nav">
+          <button class="tab-btn active" data-tab="ingredientes">Ingredientes</button>
+          <button class="tab-btn" data-tab="preparo">Modo de Preparo</button>
+          <button class="tab-btn" data-tab="dicas">Dicas do Chef</button>
+          <button class="tab-btn" data-tab="avaliacoes">Avaliações</button>
+        </div>
+
+        <div class="tab-content">
+          <!-- Ingredientes -->
+          <div class="tab-panel active" id="ingredientes">
+            <h3>Ingredientes</h3>
+            <div class="ingredients-sections">
+              <div class="ingredient-section">
+                <ul>
+                  <li>1 limão tahiti</li>
+                  <li>2 colheres de sopa de açúcar</li>
+                  <li>50 ml de cachaça</li>
+                  <li>Gelo a gosto</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modo de Preparo -->
+          <div class="tab-panel" id="preparo">
+            <h3>Modo de Preparo</h3>
+            <div class="preparation-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <p>Corte o limão em 8 pedaços.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <p>Coloque o limão no copo, adicione o açúcar e macere suavemente para extrair o suco.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <p>Adicione a cachaça e gelo a gosto.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <p>Misture delicadamente e sirva imediatamente.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dicas do Chef -->
+          <div class="tab-panel" id="dicas">
+            <h3>Dicas do Chef</h3>
+            <div class="chef-tips">
+              <div class="tip">
+                <h4>💡 Escolha do Limão</h4>
+                <p>Use limões frescos, firmes e preferencialmente sem partes verdes para melhor sabor.</p>
+              </div>
+              <div class="tip">
+                <h4>💡 Adoçando a Caipirinha</h4>
+                <p>Ajuste o açúcar à sua preferência e misture bem para dissolver por completo.</p>
+              </div>
+              <div class="tip">
+                <h4>💡 Cachaça de Qualidade</h4>
+                <p>Uma boa cachaça faz diferença no sabor final da bebida.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Avaliações -->
+          <div class="tab-panel" id="avaliacoes">
+            <h3>Avaliações dos Utilizadores</h3>
+            <div class="reviews-summary">
+              <div class="rating-overview">
+                <span class="big-rating">4.7 ⭐</span>
+                <span>Baseado em 123 avaliações</span>
+              </div>
+            </div>
+            <div class="individual-reviews">
+              <div class="review">
+                <div class="review-header">
+                  <span class="reviewer">Ana Costa</span>
+                  <span class="rating">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p>"Simples, refrescante e perfeita para o verão. Adoro essa receita!"</p>
+              </div>
+              <div class="review">
+                <div class="review-header">
+                  <span class="reviewer">Pedro Lima</span>
+                  <span class="rating">⭐⭐⭐⭐</span>
+                </div>
+                <p>"Fácil de fazer e muito saborosa. Só diminui o açúcar um pouco."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Receitas relacionadas -->
+      <section class="related-recipes">
+        <h3>Receitas Relacionadas</h3>
+        <div class="recipes-grid">
+          <article class="recipe-card">
+            <div class="recipe-image">
+              <img src="/trabalho/img/smoothie-morango1.jpg" alt="Margarita" style="width:100%;height:150px;object-fit:cover;border-radius:8px;" />
+            </div>
+            <h4><a href="/trabalho/receitas/smoothie-morango.html">Smoothie de Morango</a></h4>
+            <p>Natural, cremoso, ideal para dias quentes ou como lanche saudável.</p>
+            <div class="recipe-info">
+              <span class="difficulty">⭐ Fácil</span>
+              <span class="time">⏱️ 10min</span>
+            </div>
+          </article>
+
+          <article class="recipe-card">
+            <div class="recipe-image">
+              <img src="/trabalho/img/iced-tea1.jpg" alt="Mojito" style="width:100%;height:150px;object-fit:cover;border-radius:8px;" />
+            </div>
+            <h4><a href="/trabalho/receitas/iced-tea.html">Iced Tea de Morango</a></h4>
+            <p>Chá gelado caseiro, saboroso, perfeito para acompanhar qualquer refeição.</p>
+            <div class="recipe-info">
+              <span class="difficulty">⭐ Fácil</span>
+              <span class="time">⏱️ 15min</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-services">
+        <div class="service">
+          <h4>📱 APP GRATUITA</h4>
+          <p>Todas as receitas sempre à mão</p>
+        </div>
+        <div class="service">
+          <h4>👨‍🍳 CHEFS ESPECIALISTAS</h4>
+          <p>Receitas testadas por profissionais</p>
+        </div>
+        <div class="service">
+          <h4>📝 LISTAS DE COMPRAS</h4>
+          <p>Ingredientes organizados automaticamente</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Receitas - As melhores receitas estão aqui</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Pequeno efeito hover nos cards
+    document.querySelectorAll('.recipe-card').forEach(card => {
+      card.addEventListener('mouseenter', function () {
+        this.style.transform = 'translateY(-5px)';
+      })
+      card.addEventListener('mouseleave', function () {
+        this.style.transform = 'translateY(0)';
+      })
+    });
+  </script>
+</body>
+</html>

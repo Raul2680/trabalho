@@ -2,78 +2,240 @@
 <html lang="pt-pt">
 <head>
   <meta charset="UTF-8">
-  <title>Receitas Colaborativas</title>
+  <title>Receitas - As Melhores Receitas Online</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- NAVBAR PROFISSIONAL -->
-  <header class="navbar">
-    <div class="navbar-content">
-      <a href="/trabalho/src/index.html" class="nav-logo" aria-label="Página Principal">🍽️</a>
-      <span class="nav-title">Receitas Colaborativas</span>
-      <form class="nav-search" action="/pesquisa.html" method="GET">
-        <input type="text" name="q" placeholder="Procure receita, ingrediente...">
-        <button type="submit" aria-label="Pesquisar">🔎</button>
-      </form>
-      <nav class="nav-menu">
-        <button class="menu-btn" aria-haspopup="true" aria-expanded="false">Comidas ▾</button>
-        <ul class="menu-dropdown">
-          <li><a href="/trabalho/receitas/brigadeiro.html">Brigadeiro</a></li>
-          <li><a href="/trabalho/receitas/coxinha-frango.html">Coxinha de Frango</a></li>
-          <li><a href="/trabalho/receitas/feijoada.html">Feijoada</a></li>
-          <li><a href="/trabalho/receitas/francesinha.html">Francesinha</a></li>
-          <li><a href="/trabalho/receitas/arroz-de-pato.html">Arroz de Pato</a></li>
-          <li><a href="/trabalho/receitas/pastel-de-nata.html">Pastel de Nata</a></li>
-          <li><a href="/trabalho/receitas/amêijoas-à-bulhão-pato.html">Amêijoas à Bulhão Pato</a></li>
-          <li><a href="/trabalho/receitas/carne-de-porco-à-alentejana.html">Carne de Porco à Alentejana</a></li>
-        </ul>
-      </nav>
-            <!-- Botão de modo escuro completamente à direita -->
-      <button class="darkmode-toggle" id="toggle-darkmode" title="Alternar modo escuro" aria-label="Modo escuro">🌙</button>
+  <!-- Header com navegação estilo PCDiga -->
+  <header class="main-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">🍽️ Receitas</a>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Procurar receitas, ingredientes...">
+          <button>🔎</button>
+        </div>
+        <div class="header-info">
+          <span>📖 Mais de 1000 receitas</span>
+          <span>⭐ Avaliações reais</span>
+        </div>
+      </div>
     </div>
+    <nav class="main-nav">
+      <div class="container">
+        <ul>
+          <li><a href="/trabalho/src/doces.html">Doces e Sobremesas</a></li>
+          <li><a href="/trabalho/src/salgados.html">Pratos Principais</a></li>
+          <li><a href="/trabalho/src/aperitivos.html">Aperitivos</a></li>
+          <li><a href="/trabalho/src/bebidas.html">Bebidas</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
-  <main>
-    <section style="padding:3rem 0;">
-      <h1 style="text-align:center;font-weight:800;">Bem-vindo ao Projeto Receitas Colaborativas!</h1>
-      <p style="text-align:center;max-width:460px;margin:1.3rem auto;font-size:1.15rem;">
-        Use a barra de pesquisa acima para procurar receitas ou explore via o menu “Comidas”.
-      </p>
-    </section>
+  <!-- Banner promocional estilo "Dias PCDiguianos" -->
+  <section class="promo-banner">
+    <div class="container">
+      <h2>🏆 Receitas do Chef da Semana</h2>
+      <div class="countdown">
+        <span>2 dias restantes</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grid de receitas principal -->
+  <main class="main-content">
+    <div class="container">
+      
+      <!-- Seção Destaques -->
+      <section class="recipes-section">
+        <h3>🌟 Receitas em Destaque</h3>
+        <div class="recipes-grid">
+          <article class="recipe-card featured">
+            <div class="recipe-image">
+              <img src="/trabalho/img/brigadeiro1.jpg" alt="Brigadeiro" style="width:100%;height:225px;object-fit:cover;border-radius:8px;">
+            </div>
+            <div class="recipe-badge">Chef Recomenda</div>
+            <h4><a href="/trabalho/receitas/brigadeiro.html">Brigadeiro Gourmet</a></h4>
+            <p>O clássico brasileiro com toque premium. Chocolate 70% e acabamento profissional.</p>
+            <div class="recipe-info">
+              <span class="difficulty">⭐⭐ Fácil</span>
+              <span class="time">⏱️ 30min</span>
+            </div>
+            <div class="recipe-rating">
+              <span>4.8 ⭐ (324 avaliações)</span>
+            </div>
+          </article>
+
+          <article class="recipe-card">
+            <div class="recipe-image">
+              <img src="/trabalho/img/coxinha1.jpg" alt="Coxinha de Frango" style="width:100%;height:225px;object-fit:cover;border-radius:8px;">
+            </div>
+            <div class="recipe-badge">Top Vendas 🔥</div>
+            <h4><a href="/trabalho/receitas/coxinha-frango.html">Coxinha de Frango</a></h4>
+            <p>Massa crocante, recheio suculento. A receita mais pedida da semana!</p>
+            <div class="recipe-info">
+              <span class="difficulty">⭐⭐⭐ Médio</span>
+              <span class="time">⏱️ 1h 15min</span>
+            </div>
+            <div class="recipe-rating">
+              <span>4.6 ⭐ (189 avaliações)</span>
+            </div>
+          </article>
+
+          <article class="recipe-card">
+            <div class="recipe-image">
+              <img src="/trabalho/img/feijoada1.jpg" alt="Feijoada" style="width:100%;height:225px;object-fit:cover;border-radius:8px;">
+            </div>
+            <h4><a href="/trabalho/receitas/feijoada.html">Feijoada Tradicional</a></h4>
+            <p>Receita autêntica, carnes selecionadas. Perfeita para o fim de semana.</p>
+            <div class="recipe-info">
+              <span class="difficulty">⭐⭐⭐⭐ Difícil</span>
+              <span class="time">⏱️ 3h 30min</span>
+            </div>
+            <div class="recipe-rating">
+              <span>4.9 ⭐ (456 avaliações)</span>
+            </div>
+          </article>
+
+          <article class="recipe-card">
+            <div class="recipe-image">
+              <img src="/trabalho/img/pastelnata1.jpg" alt="Pastel de Nata" style="width:100%;height:225px;object-fit:cover;border-radius:8px;">
+            </div>
+            <div class="recipe-badge">Novidade</div>
+            <h4><a href="/trabalho/receitas/pastel-de-nata.html">Pastel de Nata</a></h4>
+            <p>Receita portuguesa autêntica. Massa folhada e creme perfeito.</p>
+            <div class="recipe-info">
+              <span class="difficulty">⭐⭐⭐ Médio</span>
+              <span class="time">⏱️ 45min</span>
+            </div>
+            <div class="recipe-rating">
+              <span>4.7 ⭐ (98 avaliações)</span>
+            </div>
+          </article>
+
+          <!-- Receita nova da Lasanha adicionada -->
+          <article class="recipe-card">
+            <div class="recipe-image">
+              <img src="/trabalho/img/lasanha1.jpg" alt="Lasanha Italiana" style="width:100%;height:225px;object-fit:cover;border-radius:8px;">
+            </div>
+            <h4><a href="/trabalho/receitas/lasanha.html">Lasanha Italiana</a></h4>
+            <p>Camadas de molho, massa e queijo num clássico reconfortante.</p>
+            <div class="recipe-info">
+              <span class="difficulty">⭐⭐⭐ Médio</span>
+              <span class="time">⏱️ 1h 25min</span>
+            </div>
+            <div class="recipe-rating">
+              <span>4.8 ⭐ (312 avaliações)</span>
+            </div>
+          </article>
+                    <!-- Receita nova da Caipirinha Clássica adicionada -->
+          <article class="recipe-card">
+            <div class="recipe-image">
+              <img src="/trabalho/img/caipirinha1.jpg" alt="Caipirinha Clássica" style="width:100%;height:225px;object-fit:cover;border-radius:8px;">
+            </div>
+            <h4><a href="/trabalho/receitas/caipirinha.html">Caipirinha Clássica</a></h4>
+            <p>Bebida refrescante brasileira, feita com limão, cachaça e açúcar.</p>
+            <div class="recipe-info">
+              <span class="difficulty">⭐ Muito Fácil</span>
+              <span class="time">⏱️ 10min</span>
+            </div>
+            <div class="recipe-rating">
+              <span>4.7 ⭐ (123 avaliações)</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Seção Top Receitas -->
+      <section class="recipes-section">
+        <h3>🔥 Mais Populares</h3>
+        <div class="recipes-grid">
+          <article class="recipe-card">
+            <div class="recipe-image">
+              <img src="/trabalho/img/carbonara1.jpg" alt="Esparguete à carbonara" style="width:100%;height:225px;object-fit:cover;border-radius:8px;">
+            </div>
+            <h4><a href="/trabalho/receitas/carbonara.html">Esparguete à carbonara</a></h4>
+            <p>Receita italiana clássica, cremosa e saborosa.</p>
+            <div class="recipe-info">
+              <span class="difficulty">⭐⭐ Fácil</span>
+              <span class="time">⏱️ 20min</span>
+            </div>
+            <div class="recipe-rating">
+              <span>4.5 ⭐ (267 avaliações)</span>
+            </div>
+          </article>
+
+          <article class="recipe-card">
+            <div class="recipe-image">
+              <img src="/trabalho/img/salada1.jpg" alt="Salada caesar" style="width:100%;height:225px;object-fit:cover;border-radius:8px;">
+            </div>
+            <h4><a href="/trabalho/receitas/salada-caesar.html">Salada caesar</a></h4>
+            <p>Fresca, crocante e com molho caseiro especial.</p>
+            <div class="recipe-info">
+              <span class="difficulty">⭐ Muito Fácil</span>
+              <span class="time">⏱️ 15min</span>
+            </div>
+            <div class="recipe-rating">
+              <span>4.4 ⭐ (156 avaliações)</span>
+            </div>
+          </article>
+
+          <article class="recipe-card">
+            <div class="recipe-image">
+              <img src="/trabalho/img/bolo-chocolate1.jpg" alt="Bolo de chocolate" style="width:100%;height:225px;object-fit:cover;border-radius:8px;">
+            </div>
+             <h4><a href="/trabalho/receitas/bolo-chocolate.html">Bolo de chocolate</a></h4>
+            <p>Fofinho, húmido e com cobertura irresistível.</p>
+            <div class="recipe-info">
+              <span class="difficulty">⭐⭐⭐ Médio</span>
+              <span class="time">⏱️ 1h 30min</span>
+            </div>
+            <div class="recipe-rating">
+              <span>4.8 ⭐ (412 avaliações)</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <footer>
-    Projeto colaborativo no GitHub &middot; <span id="ano"></span>
+  <!-- Footer estilo PCDiga -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-services">
+        <div class="service">
+          <h4>📱 APP GRATUITA</h4>
+          <p>Todas as receitas sempre à mão</p>
+        </div>
+        <div class="service">
+          <h4>👨‍🍳 CHEFS ESPECIALISTAS</h4>
+          <p>Receitas testadas por profissionais</p>
+        </div>
+        <div class="service">
+          <h4>📝 LISTAS DE COMPRAS</h4>
+          <p>Ingredientes organizados automaticamente</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Receitas - As melhores receitas estão aqui</p>
+      </div>
+    </div>
   </footer>
-<script>
-  document.getElementById('ano').textContent = new Date().getFullYear();
 
-  // Dropdown Menu
-  document.querySelector('.menu-btn').onclick = function () {
-    document.querySelector('.menu-dropdown').classList.toggle('show');
-    this.setAttribute('aria-expanded', document.querySelector('.menu-dropdown').classList.contains('show'));
-  };
-  document.body.addEventListener('click', function(e){
-    if (!e.target.closest('.nav-menu')) {
-      document.querySelector('.menu-dropdown').classList.remove('show');
-      document.querySelector('.menu-btn').setAttribute('aria-expanded','false');
-    }
-  });
-
-  // Botão DARK MODE
-  document.getElementById('toggle-darkmode').addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-    this.textContent = document.body.classList.contains('dark-mode') ? "☀️" : "🌙";
-    // Guarda a preferência do utilizador
-    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-  });
-
-  // Aplica o modo escuro automaticamente se for a escolha guardada
-  if(localStorage.getItem('darkMode') === 'dark') {
-    document.body.classList.add('dark-mode');
-    document.getElementById('toggle-darkmode').textContent = "☀️";
-  }
-</script>
+  <script>
+    // Simulação de interatividade básica
+    document.querySelectorAll('.recipe-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+      });
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+      });
+    });
+  </script>
 </body>
 </html>
