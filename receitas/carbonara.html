@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Esparguete à Carbonara - Receita</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/trabalho/src/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="logo">
+          <a href="/trabalho/src/index.html">🍽️ Receita</a>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Procurar receitas, ingredientes...">
+          <button>🔎</button>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <div class="container">
+        <ul>
+          <li><a href="/trabalho/src/doces.html">Doces e Sobremesas</a></li>
+          <li><a href="/trabalho/src/salgados.html">Pratos Principais</a></li>
+          <li><a href="/trabalho/src/aperitivos.html">Aperitivos</a></li>
+          <li><a href="/trabalho/src/bebidas.html">Bebidas</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="/trabalho/src/index.html">Início</a> > <a href="/trabalho/src/salgados.html">Pratos Principais</a> > <span>Esparguete à Carbonara</span>
+    </div>
+  </div>
+
+  <main class="recipe-page">
+    <div class="container">
+      <div class="recipe-layout">
+        <!-- Galeria de imagens locais -->
+        <div class="recipe-gallery">
+          <img src="/trabalho/img/carbonara1.jpg" alt="Esparguete à Carbonara" class="main-image" id="main-image" />
+          <div class="image-thumbnails">
+            <img src="/trabalho/img/carbonara1_thumb.jpg" alt="Miniatura 1" class="thumb active" data-large="/trabalho/img/carbonara1.jpg" />
+            <img src="/trabalho/img/carbonara2_thumb.jpg" alt="Miniatura 2" class="thumb" data-large="/trabalho/img/carbonara2.jpg" />
+            <img src="/trabalho/img/carbonara3_thumb.jpg" alt="Miniatura 3" class="thumb" data-large="/trabalho/img/carbonara3.jpg" />
+          </div>
+        </div>
+
+        <div class="recipe-details">
+          <h1>Esparguete à Carbonara</h1>
+          <div class="recipe-rating-large">
+            <span class="stars">⭐⭐⭐⭐⭐ 4.8</span>
+            <span class="reviews">(219 avaliações)</span>
+            <a href="#avaliacoes" class="write-review">Escrever avaliação</a>
+          </div>
+          <div class="recipe-badges">
+            <span class="badge popular">Muito Popular 🍝</span>
+            <span class="badge chef">Chef Aprovado</span>
+          </div>
+          <div class="recipe-specs">
+            <div class="spec-row"><span class="label">Dificuldade:</span> <span class="value">⭐⭐ Fácil</span></div>
+            <div class="spec-row"><span class="label">Tempo Prep:</span> <span class="value">10 minutos</span></div>
+            <div class="spec-row"><span class="label">Tempo Cozimento:</span> <span class="value">15 minutos</span></div>
+            <div class="spec-row"><span class="label">Porções:</span> <span class="value">4 pessoas</span></div>
+            <div class="spec-row"><span class="label">Categoria:</span> <span class="value">Massas</span></div>
+            <div class="spec-row"><span class="label">Calorias:</span> <span class="value">~520 kcal/porção</span></div>
+          </div>
+          <div class="recipe-actions">
+            <button class="btn-primary">📖 Ver Receita Completa</button>
+            <button class="btn-secondary">📱 Guardar nos Favoritos</button>
+            <button class="btn-secondary">🛒 Lista de Compras</button>
+          </div>
+          <div class="recipe-services">
+            <div class="service-item"><span class="icon">✅</span> Receita testada e aprovada</div>
+            <div class="service-item"><span class="icon">🎥</span> Vídeo passo a passo disponível</div>
+            <div class="service-item"><span class="icon">📱</span> Sincroniza com a app móvel</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RECEITA EM TABS -->
+      <div class="recipe-tabs">
+        <div class="tab-nav">
+          <button class="tab-btn active" data-tab="ingredientes">Ingredientes</button>
+          <button class="tab-btn" data-tab="preparo">Modo de Preparo</button>
+          <button class="tab-btn" data-tab="dicas">Dicas do Chef</button>
+          <button class="tab-btn" data-tab="avaliacoes">Avaliações</button>
+        </div>
+        <div class="tab-content">
+          <!-- Ingredientes -->
+          <div class="tab-panel active" id="ingredientes">
+            <h3>Ingredientes</h3>
+            <ul>
+              <li>400g de esparguete</li>
+              <li>150g de bacon em tiras ou cubos</li>
+              <li>3 gemas de ovo</li>
+              <li>1 ovo inteiro</li>
+              <li>50g de queijo parmesão ralado</li>
+              <li>Pimenta preta moída na hora</li>
+              <li>Sal q.b.</li>
+            </ul>
+            <button class="btn-primary">🛒 Adicionar à Lista de Compras</button>
+          </div>
+
+          <!-- Preparo -->
+          <div class="tab-panel" id="preparo">
+            <h3>Modo de Preparo</h3>
+            <div class="preparation-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Cozinhar o esparguete</h4>
+                  <p>Coze o esparguete em água a ferver com sal até ficar al dente. Reserva um pouco da água da cozedura.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Preparar o molho</h4>
+                  <p>Numa taça, bate as gemas com o ovo inteiro e mistura o queijo parmesão e pimenta preta a gosto.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Saltear o bacon</h4>
+                  <p>Salteia o bacon numa frigideira até ficar dourado e crocante.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Juntar tudo</h4>
+                  <p>Escorre o esparguete e junta-o ao bacon ainda quente. Fora do lume, adiciona a mistura de ovos e queijo, mexendo bem. Se necessário, adiciona um pouco da água da cozedura para deixar o molho mais cremoso.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dicas do Chef -->
+          <div class="tab-panel" id="dicas">
+            <h3>Dicas do Chef</h3>
+            <div class="chef-tips">
+              <div class="tip">
+                <h4>🥚 Fora do lume!</h4>
+                <p>Ao adicionar os ovos, certifica-te que o lume está desligado para evitar que os ovos cozinhem como omelete.</p>
+              </div>
+              <div class="tip">
+                <h4>🧀 Queijo de qualidade</h4>
+                <p>Usa parmesão ralado na hora para um sabor mais autêntico.</p>
+              </div>
+              <div class="tip">
+                <h4>💡 Carbonara tradicional</h4>
+                <p>Evita usar natas! A receita original italiana não leva.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Avaliações -->
+          <div class="tab-panel" id="avaliacoes">
+            <h3>Avaliações dos Utilizadores</h3>
+            <div class="reviews-summary">
+              <div class="rating-overview">
+                <span class="big-rating">4.8 ⭐</span>
+                <span>Baseado em 219 avaliações</span>
+              </div>
+            </div>
+            <div class="individual-reviews">
+              <div class="review">
+                <div class="review-header">
+                  <span class="reviewer">João Ferreira</span>
+                  <span class="rating">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p>"Simples e deliciosa! Sabor autêntico como em Itália."</p>
+              </div>
+              <div class="review">
+                <div class="review-header">
+                  <span class="reviewer">Marta Lopes</span>
+                  <span class="rating">⭐⭐⭐⭐</span>
+                </div>
+                <p>"Ficou muito cremosa! Não usei natas e mesmo assim ficou perfeita."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- receitas relacionadas ... -->
+      <section class="related-recipes">
+        <h3>Receitas Relacionadas</h3>
+        <div class="recipes-grid">
+          <article class="recipe-card">
+            <div class="recipe-image">🍝</div>
+            <h4>Tagliatelle com Cogumelos</h4>
+            <div class="recipe-info"><span class="difficulty">⭐⭐ Médio</span><span class="time">⏱️ 30min</span></div>
+          </article>
+          <article class="recipe-card">
+            <div class="recipe-image">🧄</div>
+            <h4>Spaghetti Aglio e Olio</h4>
+            <div class="recipe-info"><span class="difficulty">⭐ Fácil</span><span class="time">⏱️ 20min</span></div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2025 Receita - As melhores receitas estão aqui</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Tabs funcionalidade
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', function () {
+        const tabId = this.dataset.tab;
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        this.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+    // Galeria
+    const mainImage = document.getElementById('main-image');
+    const thumbs = document.querySelectorAll('.thumb');
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', function () {
+        const bigSrc = this.getAttribute('data-large');
+        mainImage.src = bigSrc;
+        thumbs.forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
