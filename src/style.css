@@ -674,4 +674,28 @@ body {
 .thumb:hover {
   border-color: #e74c3c; /* ou #ff9800 para tema laranja */
 }
+  .image-thumbnails {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.thumb {
+  width: 90px;
+  height: 70px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  /* Garante que não estica, apenas corta o excesso */
+  aspect-ratio: 9/7;
+  background: #fff;
+}
+
+.thumb.active,
+.thumb:hover {
+  border-color: #e74c3c;
+}
+
 }
